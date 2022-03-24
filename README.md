@@ -5,6 +5,6 @@
 * Django 3.2 (framework)
 * Gunicorn (to run server on heroku)
 
-* dj_database_url (library)
-* psycopg2 (library to connect to PostgreSQL)
-* cloudinary (library to host pictures on Heroku)
+* Dj_database_url (library)
+* Psycopg2 (library to connect to PostgreSQL)
+* Cloudinary (library to host pictures on Heroku)
