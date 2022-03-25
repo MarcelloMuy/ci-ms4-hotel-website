@@ -1,7 +1,7 @@
-''' Modules from django '''
+''' Imported Modules '''
+from datetime import date
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import date
 
 
 class Booking(models.Model):
@@ -18,9 +18,16 @@ class Booking(models.Model):
         ('Double', 'Double Room'),
         ('Family', 'Family Room'),
     ]
-    type_of_room = models.CharField(max_length=15, choices=TYPE_OF_ROOM_CHOICES, blank=False, default='Single')
-    
+    type_of_room = models.CharField(
+        max_length=15,
+        choices=TYPE_OF_ROOM_CHOICES,
+        blank=False,
+        default='Single'
+        )
+
     def __str__(self):
         return str(self.check_in_date)
+
     class Meta:
+        """ Meta class used for organizing bookings by check-in date """
         ordering = ['check_in_date']
