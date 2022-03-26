@@ -10,3 +10,8 @@ def display_bookings(request):
         'mybookings': mybookings
     }
     return render(request, '../templates/mybookings.html', context)
+
+
+def display_home(request):
+    ''' Function to display home page'''
+    return render(request, '../templates/index.html')

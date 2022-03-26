@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from bookingsystem.views import display_bookings
+from bookingsystem.views import display_bookings, display_home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mybookings/', display_bookings, name='mybookings')
-]
+    path('mybookings/', display_bookings, name='mybookings'),
+    path('', display_home, name='homepage')
+    ]
