@@ -10,14 +10,20 @@
 </head>
 <body>
     <h1>This is the mybookings template</h1>
-
+    
+    <h2>Old Bookings</h2>
     <table>
-        <h2>Old Bookings</h2>
+        <tr>
+            <th>User:</th>
+            <th>Check-in Date:</th>
+            <th>Number of Nights:</th>
+            <th>Type of room:</th>
+        </tr>
         {% for booking in mybookings %}
             <tr>
-                {% if booking.check_in_date < booking.today %}
+                {% if booking.check_in_date < booking.today %} 
                     <td>{{ booking.user }}</td>
-                    <td>{{ booking.check_in_date }}</td>
+                    <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
                     <td>{{ booking.number_of_nights }}</td>
                     <td>{{ booking.type_of_room}}</td>
                 {% endif %}
@@ -26,13 +32,19 @@
         <tr><td>You don't have any old bookings.</td></tr>    
         {% endfor %}
     </table>
+    <h2>Next Bookings</h2>
     <table>
-        <h2>Next Bookings</h2>
+        <tr>
+            <th>User:</th>
+            <th>Check-in Date:</th>
+            <th>Number of Nights:</th>
+            <th>Type of room:</th>
+        </tr>
         {% for booking in mybookings %}
             <tr>
                 {% if booking.check_in_date >= booking.today %}
                     <td>{{ booking.user }}</td>
-                    <td>{{ booking.check_in_date }}</td>
+                    <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
                     <td>{{ booking.number_of_nights }}</td>
                     <td>{{ booking.type_of_room}}</td>
                 {% endif %}
