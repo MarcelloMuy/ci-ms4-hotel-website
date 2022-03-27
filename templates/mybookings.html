@@ -21,6 +21,16 @@
                 <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
                 <td>{{ booking.number_of_nights }}</td>
                 <td>{{ booking.type_of_room}}</td>
+                <td>
+                    <a href="/update/{{ booking.id }}">
+                        <button>Update Booking</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/cancel/{{ booking.id }}">
+                        <button>Cancel Booking</button>
+                    </a>
+                </td>
             {% endif %}
         </tr>
     <!-- Display message if no bookings are found -->
@@ -44,6 +54,16 @@
                 <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
                 <td>{{ booking.number_of_nights }}</td>
                 <td>{{ booking.type_of_room}}</td>
+                <td>
+                    <a href="/update/{{ booking.id }}">
+                        <button>Update Booking</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/cancel/{{ booking.id }}">
+                        <button>Cancel Booking</button>
+                    </a>
+                </td>
             {% endif %}
         </tr>
     <!-- Display message if no bookings are found -->
