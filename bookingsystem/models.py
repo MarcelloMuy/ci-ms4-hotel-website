@@ -25,6 +25,7 @@ class Booking(models.Model):
         default='Single'
         )
 
+    ''' Display objects using the check-in date'''
     def __str__(self):
         return str(self.check_in_date)
 

@@ -20,9 +20,9 @@ def display_home(request):
 
 def display_booknow(request):
     ''' Function to display booknow page'''
-    if request.method == 'POST':
+    if request.method == 'POST':  # Look for POST method only
         form = BookingForm(request.POST)
-        if form.is_valid():
+        if form.is_valid():  # Check if form is valid
             form.save()
             return redirect('/mybookings/')
     form = BookingForm()
