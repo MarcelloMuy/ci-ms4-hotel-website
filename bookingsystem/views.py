@@ -23,6 +23,7 @@ def book_now(request):
     if request.method == 'POST':  # Look for POST method only
         form = BookingForm(request.POST)
         if form.is_valid():  # Check if form is valid
+            form.instance.user = request.user  # Book as authenticated user
             form.save()
             return redirect('/mybookings/')
     form = BookingForm()

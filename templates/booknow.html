@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-
+            {% if user.is_authenticated %}
             <h1>Booking form</h1>
 
             <form method="POST" action="/booknow/">
@@ -17,7 +17,14 @@
                     </p>
                 </div>
             </form>
+            {% else %}
 
+            <h2>Please Sign in to do a booking</h2>
+            <a href="{% url 'account_login' %}">
+                <button>Sign in</button>
+            </a>
+            
+            {% endif %}
         </div>
     </div>
 </div>
