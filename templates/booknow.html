@@ -2,16 +2,24 @@
 
 {% block content %}
 
-<h1>Booking form</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
 
-<form method="POST" action="/booknow/">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <p>
-            <button type="submit">Book Now</button>
-        </p>
+            <h1>Booking form</h1>
+
+            <form method="POST" action="/booknow/">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div>
+                    <p>
+                        <button type="submit">Book Now</button>
+                    </p>
+                </div>
+            </form>
+
+        </div>
     </div>
-</form>
+</div>
 
 {% endblock %}
