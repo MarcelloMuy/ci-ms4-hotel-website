@@ -2,74 +2,85 @@
 
 {% block content %}
 
-<h1>My Bookings</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
 
-<!-- Table to display bookings -->
-<h2>Past Bookings</h2>
-<table>
-    <tr>
-        <th>User:</th>
-        <th>Check-in Date:</th>
-        <th>Number of Nights:</th>
-        <th>Type of room:</th>
-    </tr>
-    {% for booking in mybookings %}
-        <tr>
-            <!-- Looks for older than today bookings -->
-            {% if booking.check_in_date < booking.today %} 
-                <td>{{ booking.user }}</td>
-                <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
-                <td>{{ booking.number_of_nights }}</td>
-                <td>{{ booking.type_of_room}}</td>
-                <td>
-                    <a href="/update/{{ booking.id }}">
-                        <button>Update Booking</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/cancel/{{ booking.id }}">
-                        <button>Cancel Booking</button>
-                    </a>
-                </td>
-            {% endif %}
-        </tr>
-    <!-- Display message if no bookings are found -->
-    {% empty %}
-        <tr><td>You don't have any past bookings.</td></tr>    
-    {% endfor %}
-</table>
-<h2>Upcoming Bookings</h2>
-<table>
-    <tr>
-        <th>User:</th>
-        <th>Check-in Date:</th>
-        <th>Number of Nights:</th>
-        <th>Type of room:</th>
-    </tr>
-    {% for booking in mybookings %}
-        <tr>
-            <!-- Looks for upcoming bookings -->
-            {% if booking.check_in_date >= booking.today %}
-                <td>{{ booking.user }}</td>
-                <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
-                <td>{{ booking.number_of_nights }}</td>
-                <td>{{ booking.type_of_room}}</td>
-                <td>
-                    <a href="/update/{{ booking.id }}">
-                        <button>Update Booking</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/cancel/{{ booking.id }}">
-                        <button>Cancel Booking</button>
-                    </a>
-                </td>
-            {% endif %}
-        </tr>
-    <!-- Display message if no bookings are found -->
-    {% empty %}
-        <tr><td>You don't have any upcoming bookings.</td></tr>
-    {% endfor %}
-</table>
+            <h1>My Bookings</h1>
 
+            <!-- Table to display bookings -->
+            <h2>Past Bookings</h2>
+            <table>
+                <tr>
+                    <th>User:</th>
+                    <th>Check-in Date:</th>
+                    <th>Number of Nights:</th>
+                    <th>Type of room:</th>
+                </tr>
+                {% for booking in mybookings %}
+                <tr>
+                    <!-- Looks for older than today bookings -->
+                    {% if booking.check_in_date < booking.today %}
+                    <td>{{ booking.user }}</td>
+                    <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
+                    <td>{{ booking.number_of_nights }}</td>
+                    <td>{{ booking.type_of_room}}</td>
+                    <td>
+                        <a href="/update/{{ booking.id }}">
+                            <button>Update Booking</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/cancel/{{ booking.id }}">
+                            <button>Cancel Booking</button>
+                        </a>
+                    </td>
+                    {% endif %}
+                </tr>
+                <!-- Display message if no bookings are found -->
+                {% empty %}
+                <tr>
+                    <td>You don't have any past bookings.</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <h2>Upcoming Bookings</h2>
+            <table>
+                <tr>
+                    <th>User:</th>
+                    <th>Check-in Date:</th>
+                    <th>Number of Nights:</th>
+                    <th>Type of room:</th>
+                </tr>
+                {% for booking in mybookings %}
+                <tr>
+                    <!-- Looks for upcoming bookings -->
+                    {% if booking.check_in_date >= booking.today %}
+                    <td>{{ booking.user }}</td>
+                    <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
+                    <td>{{ booking.number_of_nights }}</td>
+                    <td>{{ booking.type_of_room}}</td>
+                    <td>
+                        <a href="/update/{{ booking.id }}">
+                            <button>Update Booking</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/cancel/{{ booking.id }}">
+                            <button>Cancel Booking</button>
+                        </a>
+                    </td>
+                    {% endif %}
+                </tr>
+                <!-- Display message if no bookings are found -->
+                {% empty %}
+                <tr>
+                    <td>You don't have any upcoming bookings.</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</div>
 {%endblock%}

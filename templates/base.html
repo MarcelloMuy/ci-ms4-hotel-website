@@ -27,7 +27,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="/">Home<span class="sr-only">(current)</span></a>
+        <a class="navbar-brand" href="{% url 'homepage' %}">Home<span class="sr-only">(current)</span></a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -35,15 +35,15 @@
                     <a class="nav-link" href="#">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/booknow/">Book Now</a>
+                    <a class="nav-link" href="{% url 'booknow' %}">Book Now</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/mybookings/">My Bookings</a>
+                    <a class="nav-link" href="{% url 'mybookings' %}">My Bookings</a>
                 </li>
                 {% if user.is_authenticated %}
                 {% else %}        
                 <li class="nav-item">
-                    <a class="nav-link" href="/accounts/signup/">Sign Up</a>
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 {% endif %}
             </ul>
@@ -52,11 +52,11 @@
             <ul class="navbar-nav mb-2 mb-lg-0">
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="/accounts/logout/">Logout</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="/accounts/login/">Login</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
                     </li>
                 {% endif %}
             </ul>
