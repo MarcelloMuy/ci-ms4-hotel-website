@@ -8,3 +8,4 @@
 * Dj_database_url (library)
 * Psycopg2 (library to connect to PostgreSQL)
 * Cloudinary (library to host pictures on Heroku)
+* django-allauth (library used for authentication and registration)

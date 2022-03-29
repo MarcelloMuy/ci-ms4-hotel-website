@@ -2,16 +2,26 @@
 
 {% block content %}
 
-<h1>Update your Booking</h1>
+{% load crispy_forms_tags %}
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <p>
-            <button type="submit">Update Booking</button>
-        </p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-2">
+
+            <h1>Update your Booking</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div>
+                    <p>
+                        <button type="submit">Update Booking</button>
+                    </p>
+                </div>
+            </form>
+
+        </div>
     </div>
-</form>
+</div>
 
 {% endblock %}
