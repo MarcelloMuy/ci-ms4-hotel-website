@@ -6,7 +6,9 @@ from .forms import BookingForm
 
 def display_bookings(request):
     ''' Function to render Bookings objects in mybookings.html template '''
-    mybookings = Booking.objects.all()
+    mybookings = Booking.objects.filter(
+        user=request.user.id
+    ).all()
     context = {
         'mybookings': mybookings
     }
