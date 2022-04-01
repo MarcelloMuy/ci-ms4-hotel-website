@@ -9,3 +9,4 @@
 * Psycopg2 (library to connect to PostgreSQL)
 * Cloudinary (library to host pictures on Heroku)
 * django-allauth (library used for authentication and registration)
+* django-crispy-forms (library used to format forms)

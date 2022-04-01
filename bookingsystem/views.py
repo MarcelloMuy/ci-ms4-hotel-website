@@ -1,16 +1,31 @@
 ''' Imported Modules '''
+from datetime import date
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .forms import BookingForm
 
 
 def display_bookings(request):
-    ''' Function to render Bookings objects in mybookings.html template '''
+    '''
+    Function to render Bookings objects in mybookings.html template 
+    mybookings - Filter objects by user id
+    past_bookings - Filter objects by check in date older than today
+    upcoming_bookings - Filter objects by check in date greater than 
+    or equal to today
+    '''
     mybookings = Booking.objects.filter(
         user=request.user.id
-    ).all()
+        ).all()
+    past_bookings = mybookings.filter(
+        check_in_date__lt=date.today()
+        ).all()
+    upcoming_bookings = mybookings.filter(
+        check_in_date__gte=date.today()
+        ).all()
     context = {
-        'mybookings': mybookings
+        'mybookings': mybookings,
+        'past_bookings': past_bookings,
+        'upcoming_bookings': upcoming_bookings,
     }
     return render(request, '../templates/mybookings.html', context)
 

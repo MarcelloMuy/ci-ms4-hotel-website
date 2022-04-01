@@ -3,101 +3,49 @@
 {% block content %}
 
 <div class="container text-center">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            {% if user.is_authenticated %}
-            <h1>My Bookings</h1>
-
-            <!-- Table to display bookings -->
-            <div class="card">
-                <div class="card-body ">
-
-                    <h2>Past Bookings</h2>
-                    <table>
-                        <tr>
-                            <th>User:</th>
-                            <th>Check-in:</th>
-                            <th>Nights:</th>
-                            <th>Room:</th>
-                        </tr>
-                        {% for booking in mybookings %}
-                        <tr>
-                            <!-- Looks for older than today bookings -->
-                            {% if booking.check_in_date < booking.today %}
-                            <td>{{ booking.user }}</td>
-                            <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
-                            <td>{{ booking.number_of_nights }}</td>
-                            <td>{{ booking.type_of_room}}</td>
-                        </tr>
-                        <div>
-                            <tr>
-                                <td>
-                                    <a href="/update/{{ booking.id }}">
-                                        <button>Update</button>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="/cancel/{{ booking.id }}">
-                                        <button>Cancel</button>
-                                    </a>
-                                </td>
-                            </tr>
+    <h1>My Bookings</h1>
+        {% if user.is_authenticated %}
+            <h2>Upcoming:</h2>
+            <div class="row col justify-content-center">            
+                {% for booking in upcoming_bookings %}
+                        <!-- Card to display bookings -->
+                        <div class="card">
+                            <img src="#" class="card-img-top" alt="#">
+                            <div class="card-body">
+                                <h3 class="card-title">Check-in: {{ booking.check_in_date|date:"d/m/Y" }}</h3>
+                                <p class="card-text">Nights: {{ booking.number_of_nights }}</p>
+                                <p class="card-text">Room: {{ booking.type_of_room}}</p>
+                                <p class="card-text">Guests: {{ booking.number_of_guests}}</p>
+                                <a href="/update/{{ booking.id }}" class="btn btn-primary">Update</a>
+                                <a href="/cancel/{{ booking.id }}" class="btn btn-danger">Delete</a>
+                            </div>
                         </div>
-                        {% endif %}
-
-                        <!-- Display message if no bookings are found -->
-                        {% empty %}
-                        <tr>
-                            <td>You don't have any past bookings.</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                </div>
-            </div>
-            <h2>Upcoming Bookings</h2>
-            <table>
-                <tr>
-                    <th>User:</th>
-                    <th>Check-in:</th>
-                    <th>Nights:</th>
-                    <th>Room:</th>
-                </tr>
-                {% for booking in mybookings %}
-                <tr>
-                    <!-- Looks for upcoming bookings -->
-                    {% if booking.check_in_date >= booking.today %}
-                    <td>{{ booking.user }}</td>
-                    <td>{{ booking.check_in_date|date:"d/m/Y" }}</td>
-                    <td>{{ booking.number_of_nights }}</td>
-                    <td>{{ booking.type_of_room}}</td>
-                    <td>
-                        <a href="/update/{{ booking.id }}">
-                            <button>Update Booking</button>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/cancel/{{ booking.id }}">
-                            <button>Cancel Booking</button>
-                        </a>
-                    </td>
-                    {% endif %}
-                </tr>
-                <!-- Display message if no bookings are found -->
-                {% empty %}
-                <tr>
-                    <td>You don't have any upcoming bookings.</td>
-                </tr>
+                    {% empty %}
+                    <p>You don't have any Upcoming bookings</p>
                 {% endfor %}
-            </table>
-            {% else %}
-
+            </div>
+            <h2>Past:</h2>
+            <div class="row col justify-content-center">                
+                {% for booking in past_bookings %}
+                        <!-- Card to display bookings -->                 
+                        <div class="card">
+                            <img src="#" class="card-img-top" alt="#">
+                            <div class="card-body">
+                                <h3 class="card-title">Check-in: {{ booking.check_in_date|date:"d/m/Y" }}</h3>
+                                <p class="card-text">Nights: {{ booking.number_of_nights }}</p>
+                                <p class="card-text">Room: {{ booking.type_of_room}}</p>
+                                <p class="card-text">Guests: {{ booking.number_of_guests}}</p>
+                            </div>
+                        </div>
+                    {% empty %}
+                    <p>You don't have any Past Bookings</p>                  
+                {% endfor %}
+            </div>
+        {% else %}
             <h2>Please Sign in to view your bookings</h2>
             <a href="{% url 'account_login' %}">
                 <button>Sign in</button>
             </a>
-
-            {% endif %}
-        </div>
-    </div>
+        {% endif %}
 </div>
 {%endblock%}
