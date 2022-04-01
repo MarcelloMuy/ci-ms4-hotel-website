@@ -1,0 +1,19 @@
+/* Set background color for all pages */
+body {
+    background-color: #F7F4E3;
+}
+
+/* Change hero image for better results in smaller screens */
+.image2{
+    display: none;
+ }
+ 
+ @media only screen and (max-width: 1000px){
+    .image1{
+      display: none;
+    }
+ 
+    .image2{
+      display: block;
+    }
+ }
