@@ -5,6 +5,9 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
+
+{% load crispy_forms_tags %}
+
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2">
@@ -15,7 +18,7 @@
 
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form | crispy }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}

@@ -3,6 +3,20 @@ body {
     background-color: #F7F4E3;
 }
 
+/* Adjust position of alert container so it doesn't push the hero img */
+#hero-img {
+    position: relative;
+}
+
+#alert-container {
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto; 
+    left: 0; 
+    right: 0;
+    text-align: center;
+}
+
 /* Change hero image for better results in smaller screens */
 .image2{
     display: none;
