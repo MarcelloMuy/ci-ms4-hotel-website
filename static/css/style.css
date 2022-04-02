@@ -5,6 +5,11 @@ body {
 }
 
 /* Navbar */
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .nav-item > a {
   color: #2F4858 !important;;
 }
