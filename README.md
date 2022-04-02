@@ -10,3 +10,4 @@
 * Cloudinary (library to host pictures on Heroku)
 * django-allauth (library used for authentication and registration)
 * django-crispy-forms (library used to format forms)
+* whitenoise (Allows web app to serve its own static files)

@@ -1,33 +1,41 @@
-/* Set background color for all pages */
+/* All pages */
 body {
-    background-color: #F7F4E3;
+    background-color: #E9DBC9;
+    color: #2F4858;
+}
+
+/* Navbar */
+.nav-item > a {
+  color: #2F4858 !important;;
 }
 
 /* Adjust position of alert container so it doesn't push the hero img */
+
+#alert-container {
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto; 
+  left: 0; 
+  right: 0;
+  text-align: center;
+}
+
 #hero-img {
     position: relative;
 }
 
-#alert-container {
-    position: absolute;
-    z-index: 1;
-    margin: 0 auto; 
-    left: 0; 
-    right: 0;
-    text-align: center;
+
+/* Adjust hero img responsiveness */
+.image1 {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    max-height: 992px;
 }
 
-/* Change hero image for better results in smaller screens */
-.image2{
-    display: none;
- }
- 
- @media only screen and (max-width: 1000px){
-    .image1{
-      display: none;
-    }
- 
-    .image2{
-      display: block;
-    }
- }
+/* Footer */
+#footer > a {
+  color: #2F4858 ;
+  margin: 10px;
+}
+
