@@ -8,24 +8,26 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             {% if user.is_authenticated %}
-            <h1>Booking form</h1>
 
+            <div class="text-center">
+                <h1>Booking Form</h1>
+            </div>
+            
             <form method="POST" action="/booknow/">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div>
-                    <p>
-                        <button type="submit">Book Now</button>
-                    </p>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-success">Book Now</button>
                 </div>
             </form>
             {% else %}
-
-            <h2>Please Sign in to do a booking</h2>
-            <a href="{% url 'account_login' %}">
-                <button>Sign in</button>
-            </a>
             
+            <div class="col-md-12 mgn-h"></div>
+                <h2>Please Sign in to Book a Room</h2>
+                <a href="{% url 'account_login' %}">
+                    <button class="btn btn-primary mgn-btn">Sign in</button>
+                </a>
+            </div>
             {% endif %}
         </div>
     </div>

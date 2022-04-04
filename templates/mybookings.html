@@ -3,16 +3,15 @@
 {% block content %}
 
 <div class="container text-center">
-    <h1>My Bookings</h1>
         {% if user.is_authenticated %}
-            <h2>Upcoming:</h2>
-            <div class="row col justify-content-center">            
+        <h1>My Bookings</h1>
+            <h2 class="book-h2">Upcoming:</h2>
+            <div class="row justify-content-center">            
                 {% for booking in upcoming_bookings %}
                         <!-- Card to display bookings -->
-                        <div class="card">
-                            <img src="#" class="card-img-top" alt="#">
+                        <div class="card card-mgn">
                             <div class="card-body">
-                                <h3 class="card-title">Check-in: {{ booking.check_in_date|date:"d/m/Y" }}</h3>
+                                <h3 class="card-title card-t">Check-in: {{ booking.check_in_date|date:"d/m/Y" }}</h3>
                                 <p class="card-text">Nights: {{ booking.number_of_nights }}</p>
                                 <p class="card-text">Room: {{ booking.type_of_room}}</p>
                                 <p class="card-text">Guests: {{ booking.number_of_guests}}</p>
@@ -21,30 +20,29 @@
                             </div>
                         </div>
                     {% empty %}
-                    <p>You don't have any Upcoming bookings</p>
+                    <p class="no-book-p">You don't have any Upcoming bookings</p>
                 {% endfor %}
             </div>
             <h2>Past:</h2>
-            <div class="row col justify-content-center">                
+            <div class="row justify-content-center">                
                 {% for booking in past_bookings %}
                         <!-- Card to display bookings -->                 
-                        <div class="card">
-                            <img src="#" class="card-img-top" alt="#">
+                        <div class="card card-mgn">
                             <div class="card-body">
-                                <h3 class="card-title">Check-in: {{ booking.check_in_date|date:"d/m/Y" }}</h3>
+                                <h3 class="card-title card-t">Check-in: {{ booking.check_in_date|date:"d/m/Y" }}</h3>
                                 <p class="card-text">Nights: {{ booking.number_of_nights }}</p>
                                 <p class="card-text">Room: {{ booking.type_of_room}}</p>
                                 <p class="card-text">Guests: {{ booking.number_of_guests}}</p>
                             </div>
                         </div>
                     {% empty %}
-                    <p>You don't have any Past Bookings</p>                  
+                    <p class="no-book-p">You don't have any Past Bookings</p>                  
                 {% endfor %}
             </div>
         {% else %}
-            <h2>Please Sign in to view your bookings</h2>
+            <h2 class="mgn-h">Please Sign in to view your bookings</h2>
             <a href="{% url 'account_login' %}">
-                <button>Sign in</button>
+                <button class="btn btn-primary mgn-btn">Sign in</button>
             </a>
         {% endif %}
 </div>
