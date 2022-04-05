@@ -8,6 +8,10 @@ h1 {
   margin-top: 15px;
 }
 
+p {
+  font-size: 20px;
+}
+
 /* Navbar */
 .navbar {
   padding-top: 0;
@@ -16,6 +20,10 @@ h1 {
 
 .nav-item > a {
   color: #2F4858 !important;;
+}
+
+.sign-link {
+  font-size: 20px;
 }
 
 /* Adjust position of alert container so it doesn't push the hero img */
@@ -27,6 +35,24 @@ h1 {
   left: 0; 
   right: 0;
   text-align: center;
+}
+
+.index-info {
+  position: absolute;
+  z-index: 1;
+  margin-top: 50px;
+  left: 0; 
+  right: 0;
+  text-align: center;
+}
+
+.index-info > h1 {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.index-info > p {
+  margin-top: 20px;
 }
 
 #hero-img {

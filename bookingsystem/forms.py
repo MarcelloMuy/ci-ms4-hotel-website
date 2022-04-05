@@ -19,6 +19,12 @@ class BookingForm(forms.ModelForm):
             'number_of_guests',
             'type_of_room',
             ]
+        labels = {
+            'check_in_date': ('Check-in date:'),
+            'number_of_nights': ('Number of nights:'),
+            'number_of_guests': ('Number of guests:'),
+            'type_of_room': ('Type of room:')
+        }
         widgets = {
             'check_in_date': DateInput(),  # Creates a datepicker in the form
         }

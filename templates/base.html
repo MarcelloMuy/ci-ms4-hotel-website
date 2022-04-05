@@ -15,7 +15,7 @@
     <!-- css static file -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <title>Hotel Name</title>
+    <title>Marco Polo Hotel</title>
 </head>
 
 <body>
@@ -59,11 +59,11 @@
         <div>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 {% if user.is_authenticated %}
-                    <li class="nav-item">
+                    <li class="nav-item sign-link">
                         <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
                     </li>
                 {% else %}
-                    <li class="nav-item">
+                    <li class="nav-item sign-link">
                         <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
                     </li>
                 {% endif %}
