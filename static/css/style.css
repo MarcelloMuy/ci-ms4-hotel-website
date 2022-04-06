@@ -2,6 +2,7 @@
 body {
     background-color: #E9DBC9;
     color: #005B4B;
+    margin-top: 70px;
 }
 
 h1 {
@@ -30,8 +31,8 @@ p {
 
 #alert-container {
   position: absolute;
-  z-index: 1;
-  margin: 0 auto; 
+  z-index: 2;
+  margin: 10px auto 0; 
   left: 0; 
   right: 0;
   text-align: center;
@@ -69,12 +70,11 @@ p {
     width: 100%;
     object-fit: cover;
     max-height: 600px;
-    margin-top: 70px;
 }
 
 /* Give margin to headings */
-.mgn-h {
-  margin-top: 40px;
+.pdn-h {
+  padding-top: 15px;
 }
 
 /* Give margin to buttons */
@@ -87,6 +87,10 @@ p {
   font-size: 20px;
   margin-right: 15px;
   margin-left: 15px;
+}
+
+#my-bookings-container {
+  padding-bottom: 70px;
 }
 
 /* Remove * from form fields */

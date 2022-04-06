@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container text-center">
+
+    <div class="col-md-8 offset-md-2">
+        <h1 class="pdn-h" >Thank you for booking with us!</h1>
+        <p>We will get in touch with you when your booking is confirmed.</p>
+        <p>Meanwhile, you can manage your bookings in the My Bookings page.</p>
+
+        <a href="{% url 'mybookings' %}">
+            <button class="btn btn-primary">Manage Bookings</button>
+        </a>
+</div>
+</div>
+
+
+{% endblock %}

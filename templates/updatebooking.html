@@ -10,7 +10,7 @@
             <div class="text-center">
                 <h1>Update your Booking</h1>
             </div>
-
+            <!-- Create form -->
             <form method="POST">
                 {% csrf_token %}
                 {{ form | crispy }}
@@ -20,7 +20,6 @@
                     </p>
                 </div>
             </form>
-
         </div>
     </div>
 </div>

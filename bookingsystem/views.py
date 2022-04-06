@@ -1,6 +1,7 @@
 ''' Imported Modules '''
 from datetime import date
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
 
@@ -42,13 +43,16 @@ def book_now(request):
         if form.is_valid():  # Check if form is valid
             form.instance.user = request.user  # Book as authenticated user
             form.save()
-            return redirect('/mybookings/')
+            return redirect('/thankyou/')
     form = BookingForm()
     context = {
         'form': form
     }
     return render(request, '../templates/booknow.html', context)
 
+def thank_you_message(request):
+    ''' Function to display thank you page/message '''
+    return render(request, '../templates/thankyou.html')
 
 def update_booking(request, booking_id):
     '''Function to edit bookings'''
@@ -58,6 +62,7 @@ def update_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():  # Check if form is valid
             form.save()
+            messages.success(request, 'Thank you for updating your booking!')
             return redirect('/mybookings/')
     form = BookingForm(instance=booking)  # Prepopulate form
     context = {
@@ -70,4 +75,5 @@ def cancel_booking(request, booking_id):
     '''Function to delete bookings'''
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
+    messages.success(request, 'Your booking has been cancelled')
     return redirect('/mybookings/')

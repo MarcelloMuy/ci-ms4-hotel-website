@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container text-center">
+<div id="my-bookings-container" class="container text-center">
         {% if user.is_authenticated %}
         <h1>My Bookings</h1>
             <h2 class="book-h2">Upcoming:</h2>
@@ -40,10 +40,13 @@
                 {% endfor %}
             </div>
         {% else %}
-            <h2 class="mgn-h">Please sign in to view your bookings.</h2>
-            <a href="{% url 'account_login' %}">
+            <div class="text-center">
+                <h1 class="pdn-h">Please sign in to view your bookings.</h1>
+                <a href="{% url 'account_login' %}">
                 <button class="btn btn-primary mgn-btn">Sign in</button>
-            </a>
+                </a>
+            </div>
+            
         {% endif %}
 </div>
 {%endblock%}
