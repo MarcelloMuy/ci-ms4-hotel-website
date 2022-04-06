@@ -3,6 +3,7 @@
 {% block content %}
     <div id="hero-img" class="container-fluid">
         <div class="row">
+            <img class="img-fluid image1" src="https://res.cloudinary.com/marcellomuy/hotel-hero-img.png" alt="Hotel lobby image">
             <div class="col-md-8 offset-md-2 index-info">
                 <h1>Welcome to Marco Polo Hotel!</h1>
                 <p>Located in Bray, the biggest town in County Wicklow, Ireland. 
@@ -12,8 +13,15 @@
                     All standard guest rooms are equipped with private bathrooms, hairdryers, spacious work desks, 
                     direct-dial telephones, and satellite television.</p>
                 <p>We look forward to seeing you at Marco Polo Hotel!</p>
+                <div>
+                    <a href="{% url 'booknow' %}">
+                        <button class="btn btn-success">Book Now</button>
+                    </a>
+                    <a href="#">
+                        <button class="btn btn-info">Check our Rooms</button>
+                    </a>
+                </div>
             </div>
-            <img class="img-fluid image1" src="https://res.cloudinary.com/marcellomuy/hotel-hero-img.png" alt="Hotel lobby image">
         </div>
     </div>
 {% endblock %}

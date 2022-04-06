@@ -1,7 +1,7 @@
 /* All pages */
 body {
     background-color: #E9DBC9;
-    color: #2F4858;
+    color: #005B4B;
 }
 
 h1 {
@@ -19,7 +19,7 @@ p {
 }
 
 .nav-item > a {
-  color: #2F4858 !important;;
+  color: #005B4B !important;;
 }
 
 .sign-link {
@@ -37,13 +37,16 @@ p {
   text-align: center;
 }
 
+/* Target information in the index page */
 .index-info {
   position: absolute;
   z-index: 1;
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 25px;
   left: 0; 
   right: 0;
   text-align: center;
+  background-color: #e9dbc98f;
 }
 
 .index-info > h1 {
@@ -55,10 +58,10 @@ p {
   margin-top: 20px;
 }
 
+/* Hero image */
 #hero-img {
     position: relative;
 }
-
 
 /* Adjust hero img responsiveness */
 .image1 {
@@ -109,7 +112,24 @@ form {
 
 /* Footer */
 #footer > a {
-  color: #2F4858 ;
+  color: #005B4B ;
   margin: 10px;
 }
 
+/*index-info responsive for larger screens */
+@media only screen and (min-width: 600px) {
+  .index-info {
+    margin-top: 50px;
+  }
+}
+
+/*index-info responsive for smaller screens */
+@media only screen and (max-width: 600px) {
+  .index-info {
+    position: initial;
+    padding-top: 15px;
+  }
+  .image1 {
+    height: auto;
+  }
+}
