@@ -50,9 +50,11 @@ def book_now(request):
     }
     return render(request, '../templates/booknow.html', context)
 
+
 def thank_you_message(request):
     ''' Function to display thank you page/message '''
     return render(request, '../templates/thankyou.html')
+
 
 def update_booking(request, booking_id):
     '''Function to edit bookings'''

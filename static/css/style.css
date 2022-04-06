@@ -1,8 +1,11 @@
 /* All pages */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap');
+
 body {
     background-color: #E9DBC9;
     color: #005B4B;
     margin-top: 70px;
+    font-family: 'Karla', sans-serif;
 }
 
 h1 {
@@ -47,7 +50,7 @@ p {
   left: 0; 
   right: 0;
   text-align: center;
-  background-color: #e9dbc98f;
+  background-color: #e9dbc9c9;
 }
 
 .index-info > h1 {

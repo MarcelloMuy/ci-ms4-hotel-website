@@ -5,7 +5,7 @@ from .models import Booking
 
 class DateInput(forms.DateInput):
     '''Validates as a date format'''
-    input_type = 'date'
+    input_type = ('date')
 
 
 class BookingForm(forms.ModelForm):
