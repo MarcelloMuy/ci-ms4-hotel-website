@@ -110,6 +110,28 @@ form {
   margin: 5px;
 }
 
+/* Map */
+#map > p {
+  padding-top: 10px;
+}
+
+#map-container {
+  background-color: #BCBEA9;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+#map {
+  width: 75%;
+  height: 75%;
+}
+
+/* Contact Us */
+#contact-us {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
 /* Footer */
 #footer > a {
   color: #005B4B ;
