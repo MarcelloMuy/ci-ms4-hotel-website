@@ -14,7 +14,7 @@ class Booking(models.Model):
     check_in_date = models.DateField(default=date.today)
     number_of_nights = models.IntegerField(default=1)
     TYPE_OF_ROOM_CHOICES = [
-        ('Single', 'Single Room'),
+        ('Twin', 'Twin Room'),
         ('Double', 'Double Room'),
         ('Family', 'Family Room'),
     ]
@@ -22,7 +22,7 @@ class Booking(models.Model):
         max_length=15,
         choices=TYPE_OF_ROOM_CHOICES,
         blank=False,
-        default='Single'
+        default='Double'
         )
 
     ''' Display objects using the check-in date'''

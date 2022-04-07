@@ -39,6 +39,8 @@ def display_home(request):
 def book_now(request):
     ''' Function to display booknow page and add a new booking'''
     if request.method == 'POST':  # Look for POST method only
+        # if request.POST['check_in_date'] < datetime.now():
+        #     pass
         form = BookingForm(request.POST)
         if form.is_valid():  # Check if form is valid
             form.instance.user = request.user  # Book as authenticated user
@@ -54,6 +56,11 @@ def book_now(request):
 def thank_you_message(request):
     ''' Function to display thank you page/message '''
     return render(request, '../templates/thankyou.html')
+
+
+def our_rooms(request):
+    ''' Function to display our rooms page '''
+    return render(request, '../templates/ourrooms.html')
 
 
 def update_booking(request, booking_id):

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="index-main-div" class="mx-5">
+    <div class="main-div mx-5">
         <div id="hero-img" class="container-fluid">
             <div class="row">
-                <img class="img-fluid image1" src="https://res.cloudinary.com/marcellomuy/hotel-hero-img.png" alt="Hotel lobby image">
+                <img class="img-fluid hero-image" src="https://res.cloudinary.com/marcellomuy/hotel-hero-img.png" alt="Hotel lobby image">
                 <div class="col-md-8 offset-md-2 index-info">
                     <h1>Marco Polo Hotel</h1>
                     <p><strong>Located in Bray, the biggest town in County Wicklow, Ireland. 
@@ -16,7 +16,7 @@
                     <p><strong>We look forward to seeing you at Marco Polo Hotel!</strong></p>
                     <div>
                         <a href="{% url 'booknow' %}" class="btn btn-success">Book Now</a>
-                        <a href="#" class="btn btn-info">Our Rooms</a>
+                        <a href="{% url 'ourrooms' %}" class="btn btn-info">Our Rooms</a>
                     </div>
                 </div>
             </div>

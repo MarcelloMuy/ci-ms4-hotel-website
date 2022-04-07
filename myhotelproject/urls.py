@@ -18,7 +18,7 @@ from django.urls import path, include
 from bookingsystem.views import (
     display_bookings, display_home,
     book_now, update_booking, cancel_booking,
-    thank_you_message)
+    thank_you_message, our_rooms)
 
 
 urlpatterns = [
@@ -30,4 +30,5 @@ urlpatterns = [
     path('cancel/<booking_id>', cancel_booking, name='cancel'),
     path('accounts/', include('allauth.urls')),
     path('thankyou/', thank_you_message, name='thankyou'),
+    path('ourrooms/', our_rooms, name='ourrooms'),
     ]
