@@ -1,5 +1,7 @@
 {% load static %}
 
+{% load active_link_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,37 +35,39 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                {% url 'homepage' as url %}
+                <li class="nav-item {% if request.path == url %}is-active{% endif %}">
                     <a class="nav-link" href="{% url 'homepage' %}">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% if request.path == url %}is-active{% endif %}">
                     <a class="nav-link" href="{% url 'homepage' %}#contact-us">Contact Us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% active_link 'ourrooms' 'is-active' %}">
                     <a class="nav-link" href="{% url 'ourrooms' %}">Our Rooms</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active {% active_link 'booknow' 'is-active' %}">
                     <a class="nav-link" href="{% url 'booknow' %}">Book Now</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% active_link 'mybookings' 'is-active' %}">
                     <a class="nav-link" href="{% url 'mybookings' %}">My Bookings</a>
                 </li>
                 {% if user.is_authenticated %}
                 {% else %}        
-                <li class="nav-item">
+                <li class="nav-item {% active_link 'account_signup' 'is-active' %}">
                     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 {% endif %}
             </ul>
         </div>
         <div>
+            <!-- Check if user is authenticated -->
             <ul class="navbar-nav mb-2 mb-lg-0">
                 {% if user.is_authenticated %}
-                    <li class="nav-item sign-link">
+                    <li class="nav-item sign-link {% active_link 'account_logout' 'is-active' %}">
                         <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
                     </li>
                 {% else %}
-                    <li class="nav-item sign-link">
+                    <li class="nav-item sign-link {% active_link 'account_login' 'is-active' %}">
                         <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
                     </li>
                 {% endif %}

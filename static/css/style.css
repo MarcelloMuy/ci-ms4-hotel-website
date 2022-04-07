@@ -26,6 +26,10 @@ p {
   padding-bottom: 0;
 }
 
+.is-active {
+  font-weight: bold;
+}
+
 .nav-item > a {
   color: #005B4B !important;;
 }
