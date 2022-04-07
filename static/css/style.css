@@ -160,6 +160,10 @@ form {
   padding-bottom: 10px;
 }
 
+#family-room-div {
+  padding-bottom: 50px;
+}
+
 /* Footer */
 #footer > a {
   color: #005B4B ;
