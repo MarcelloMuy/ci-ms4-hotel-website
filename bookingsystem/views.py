@@ -1,5 +1,5 @@
 ''' Imported Modules '''
-from datetime import date
+from datetime import date, datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Booking
@@ -39,8 +39,29 @@ def display_home(request):
 def book_now(request):
     ''' Function to display booknow page and add a new booking'''
     if request.method == 'POST':  # Look for POST method only
-        # if request.POST['check_in_date'] < datetime.now():
-        #     pass
+        # Check if check-in date is at least 1 day from booking date
+        # and show an error message
+        date_choice = request.POST['check_in_date']
+        if datetime.strptime(date_choice, '%Y-%m-%d') < datetime.today():
+            messages.error(
+                request,
+                'The check-in date must be for at least '
+                'one day from the booking date')
+            return redirect('/booknow/')
+        # Check if nunber of guests is less than 1 or
+        # bigger than 15 and show an error message
+        guests_choice = int(request.POST['number_of_guests'])
+        if guests_choice < 1 or guests_choice > 15:
+            messages.error(
+                request,
+                'You can make a booking for 1 to 15 people only!')
+        nights_choice = int(request.POST['number_of_nights'])
+        # Check if nunber of nights is less than 1 or
+        # bigger than 30 and show an error message
+        if nights_choice < 1 or nights_choice > 30:
+            messages.error(
+                request,
+                'You can make a booking for up to 30 days only!')
         form = BookingForm(request.POST)
         if form.is_valid():  # Check if form is valid
             form.instance.user = request.user  # Book as authenticated user
@@ -68,6 +89,33 @@ def update_booking(request, booking_id):
     # Get object with specific id or return 404 error
     booking = get_object_or_404(Booking, id=booking_id)
     if request.method == 'POST':  # Look for POST method only
+        # Check if check-in date is at least 1 day from booking date
+        # and show an error message
+        date_choice = request.POST['check_in_date']
+        if datetime.strptime(date_choice, '%Y-%m-%d') < datetime.today():
+            messages.error(
+                request,
+                'The check-in date must be for at least '
+                'one day from the booking date')
+            form = BookingForm(instance=booking)  # Prepopulate form
+            context = {
+                'form': form
+            }
+            return render(request, '../templates/updatebooking.html', context)
+        # Check if nunber of guests is less than 1 or
+        # bigger than 15 and show an error message
+        guests_choice = int(request.POST['number_of_guests'])
+        if guests_choice < 1 or guests_choice > 15:
+            messages.error(
+                request,
+                'You can make a booking for 1 to 15 people only!')
+        nights_choice = int(request.POST['number_of_nights'])
+        # Check if nunber of nights is less than 1 or
+        # bigger than 30 and show an error message
+        if nights_choice < 1 or nights_choice > 30:
+            messages.error(
+                request,
+                'You can make a booking for up to 30 days only!')
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():  # Check if form is valid
             form.save()
@@ -79,6 +127,11 @@ def update_booking(request, booking_id):
     }
     return render(request, '../templates/updatebooking.html', context)
 
+
+# def delete_confirmation(request, booking_id):
+#     '''Function to confirm deletion'''
+#     booking = get_object_or_404(Booking, id=booking_id)
+    
 
 def cancel_booking(request, booking_id):
     '''Function to delete bookings'''

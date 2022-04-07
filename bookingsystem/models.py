@@ -1,6 +1,7 @@
 ''' Imported Modules '''
 from datetime import date
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth.models import User
 
 
@@ -10,9 +11,11 @@ class Booking(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="user_bookings")
     created_on = models.DateTimeField(auto_now_add=True)
-    number_of_guests = models.IntegerField(default=1)
+    number_of_guests = models.PositiveIntegerField(
+        default=1, validators=[MaxValueValidator(15), MinValueValidator(1)])
     check_in_date = models.DateField(default=date.today)
-    number_of_nights = models.IntegerField(default=1)
+    number_of_nights = models.PositiveIntegerField(
+        default=1, validators=[MaxValueValidator(30), MinValueValidator(1)])
     TYPE_OF_ROOM_CHOICES = [
         ('Twin', 'Twin Room'),
         ('Double', 'Double Room'),
