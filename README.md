@@ -31,6 +31,8 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
     - [Colours](#colours)
     - [Typography](#typography)
 - [2 Features](#features)
+  - [All Pages](#all-pages)
+
 - [3 Technologies Used](#technologies-used)
 - [4 Testing](#testing)
 - [5 Development Cycle](#development-cycle)
@@ -236,6 +238,49 @@ Colours used:
 I decided to use "Karla" for all pages with "Sans Serif" as the backup font.
 
 Google fonts link [here](https://fonts.google.com/specimen/Karla?query=karla)
+
+## Features
+
+[Go to the top](#table-of-contents)
+
+### All Pages
+
+Navigation bar:
+
+- Is placed at the top of the screen at all times
+- If the user is logged in, the "Sign-in" link will change to "Sign out" and the "Register" link will disappear.
+- The link in the navbar will have a class attribute to show as active when the user is the specific page. The "Home" and "Contact US" links will be activated together as both links belong to the same page but in different sections.
+- The restaurant logo works as a link for the home page.
+- In the mobile version, the logo is positioned at the center of the navbar, and a hamburger icon is placed on the left.
+- All links are displayed when the hamburger icon is clicked, as shown below.
+
+Navbar Logged:
+
+![navbar_logged](readme_assets/wireframes/navbar_logged.png)
+
+Navbar not Logged:
+
+![navbar_not_logged](readme_assets/wireframes/navbar_not_logged.png)
+
+Navbar showing "Our Rooms" link active:
+
+![navbar_active_link](readme_assets/wireframes/navbar_active_link.png)
+
+Navbar mobile:
+
+![navbar_mobile](readme_assets/wireframes/mobile_navbar.png)
+
+Navbar hamburger icons mobile:
+
+![navbar_hamburger_icons_mobile](readme_assets/wireframes/mobile_navbar_hamburger_icon.png)
+
+Footer:
+
+- The footer is placed at the bottom of the screen at all times.
+- It has three social links placed at the center of the page that opens in a new page.
+
+![footer](readme_assets/wireframes/footer.png)
+
 
 
 
