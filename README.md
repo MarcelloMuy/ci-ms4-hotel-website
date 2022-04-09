@@ -305,7 +305,7 @@ Footer:
 ### Our Rooms Page
 
 - On the "Our Rooms" page, you will find pictures of the three types of rooms the hotel has: Double Room, Twin Room and Family Room.
-Under each picture, there is the price per night for the room and a short description of the room.
+- Under each picture, there is the price per night for the room and a short description of the room.
 
 ![features_double_room](readme_assets/features/features_double_room.png)
 ![features_twin_room](readme_assets/features/features_twin_room.png)

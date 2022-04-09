@@ -45,8 +45,7 @@ def book_now(request):
         if datetime.strptime(date_choice, '%Y-%m-%d') < datetime.today():
             messages.error(
                 request,
-                'The check-in date must be for at least '
-                'one day from the booking date')
+                'The check-in date must be from tomorrow onwards!')
             return redirect('/booknow/')
         # Check if nunber of guests is less than 1 or
         # bigger than 15 and show an error message
