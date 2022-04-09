@@ -123,6 +123,7 @@ In the second, I included the features that I found would make a good improvemen
 - Email confirmation for new bookings
 - Create a new Django view to confirm booking deletion instead of using a JavaScript function
 - Calculate the total of the booking and display it to the user
+- A button on the "Update booking" page to go back to "My Bookings" page if the user changes their mind.
 
 ## 1.2 Structure
 
@@ -289,7 +290,8 @@ Footer:
 
 ### Home Page
 
-- The Home page has a short description of the hotel and two action buttons, one for booking a room and the other that will send the user to the "Our Rooms" page, where they can see information and pictures of the rooms.
+- The Home page has a short description of the hotel and two action buttons.
+- A button for booking a room and a button that will send the user to the "Our Rooms" page, where they can see information and pictures of the rooms.
 - For larger screens the hotel information is displayed inside a container on top of the hero image to increase readability.
 
 ![features_index_hero](readme_assets/features/features_index_hero.png)
@@ -313,12 +315,117 @@ Footer:
 
 ### Book Now Page
 
+- If the user is not logged in, a call for sign-in is displayed on the page.
+
+![features_not_auth_book_form](readme_assets/features/features_not_auth_book_now.png)
+
+On the "Book Now" page, the user will be asked to fill up a form with:
+
+![features_book_now](readme_assets/features/features_book_now.png)
+
+- Check-in date (date must be for the next day onwards)
+- Number of nights (up to 30 nights)
+- Number of guests (up to 15 guests)
+- Type of room (Choose between double, twin or family rooms)
+- When clicking the "Book Now" button thank you page will be displayed.
+- On the "thank you" page, the user can find a button to manage bookings.
+
+![features_thank_you](readme_assets/features/features_thank_you.png)
+
+- An alert error message will show if the user inserts any invalid information.
+
+![features_date_error_alert](readme_assets/features/features_date_error_alert.png)
+![features_nights_error_alert](readme_assets/features/features_nights_error_alert.png)
+![features_guests_error_alert](readme_assets/features/features_guests_error_alert.png)
+
 ### My bookings Page
+
+- If the user is not logged in, a call for sign-in is displayed on the page.
+
+![features_my_bookings_not_auth](readme_assets/features/features_my_bookings_not_auth.png)
+
+On the "My bookings" page, the bookings are separated into two categories: Upcoming and Past.
+
+- If the user has no bookings, a message is displayed instead of the cards.
+
+![features_my_bookings_no_bookings](readme_assets/features/features_my_bookings_no_bookings.png)
+
+- For upcoming bookings, the card will have two buttons at the bottom for updating and deleting the booking.
+- The cards are ordered by the nearest check-in date.
+
+Bookings will be displayed in rows of up to four cards, depending on the screen size.
+Each booking is displayed on a card containing:
+
+- Check-in date
+- Number of Nights
+- Room Type
+- Number of Guests
+
+![features_my_bookings_upcoming](readme_assets/features/features_my_bookings_upcoming.png)
+![features_my_bookings_past](readme_assets/features/features_my_bookings_past.png)
+
+- If the user clicks on the "Update" button, the "Update Booking" page will show containing a form to update the booking.
+
+![features_update_booking](readme_assets/features/features_update_booking.png)
+
+- An alert will show when the update is done.
+
+![features_update_booking_alert](readme_assets/features/features_update_booking_alert.png)
+
+- If the user clicks on the "Cancel" button, a JavaScript onclick function will be called, and a popup to confirm the cancellation will show.
+
+![features_delete_booking_confirmation](readme_assets/features/features_delete_booking_confirmation.png)
+
+- An alert will show when the cancelation is done.
+
+![features_delete_booking_alert](readme_assets/features/features_delete_booking_alert.png)
 
 ### Register Page
 
+On the registration page, the user will need to fill up a form containing:
+
+- Username
+- Email(optional)
+- password
+- password(again)
+
+![features_sign_up](readme_assets/features/features_sign_up.png)
+
+When clicking the sign-up button, two alerts will show.
+
+![features_registration_alerts](readme_assets/features/features_registration_alerts.png)
+
+Because this project doesn't have an e-mail confirmation management system yet.
+This line of code was added to settings.py.
+
+```python
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+```
+
+The e-mail confirmation is handled in the console, as seen below.
+
+![features_console_email_confirmation](readme_assets/features/features_console_email_confirmation.png)
+
 ### Sign in/out
 
+On "Sign in" page, the user will need to fill up a form containing:
+
+- Username
+- Password
+
+![features_sign_in](readme_assets/features/features_sign_in.png)
+
+An alert will show once the sign-in is completed.
+
+![features_sign_alert](readme_assets/features/features_sign_in_alert.png)
+
+If the user clicks on the sign-out link in the navigation bar, the "Sign out" page will be displayed.
+
+![features_sign_out](readme_assets/features/features_sign_out.png)
+
+If the user confirms the sign-out, an alert will show.
+
+![features_sign_out_alert](readme_assets/features/features_sign_out_alert.png)
 
 
 
