@@ -54,14 +54,14 @@ def book_now(request):
         if guests_choice < 1 or guests_choice > 15:
             messages.error(
                 request,
-                'You can make a booking for 1 to 15 people only!')
+                'You can only make a booking for up to 15 people!')
         nights_choice = int(request.POST['number_of_nights'])
         # Check if nunber of nights is less than 1 or
         # bigger than 30 and show an error message
         if nights_choice < 1 or nights_choice > 30:
             messages.error(
                 request,
-                'You can make a booking for up to 30 days only!')
+                'You can only make a booking for up to 30 nights!')
         form = BookingForm(request.POST)
         if form.is_valid():  # Check if form is valid
             form.instance.user = request.user  # Book as authenticated user

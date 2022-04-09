@@ -32,7 +32,12 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
     - [Typography](#typography)
 - [2 Features](#features)
   - [All Pages](#all-pages)
-
+  - [Home Page](#home-page)
+  - [Our Rooms Page](#our_rooms_page)
+  - [Book Now Page](#book_now_page)
+  - [My Bookings Page](#my_bookings_page)
+  - [Register page](#register_page)
+  - [Sign in/out](#sign_in/out)
 - [3 Technologies Used](#technologies-used)
 - [4 Testing](#testing)
 - [5 Development Cycle](#development-cycle)
@@ -226,16 +231,17 @@ I used ColorSpace to generate this colour scheme.
 
 ![colour_scheme](readme_assets/wireframes/colour_scheme.png)
 
-Colours used:
- #E9DBC9
- #005B4B
- #e9dbc9c9
- #BCBEA9
- #f8f9fa
+The following colors were used to design this website:
+
+- #E9DBC9
+- #005B4B
+- #e9dbc9c9
+- #BCBEA9
+- #f8f9fa
 
 ### Typography
 
-I decided to use "Karla" for all pages with "Sans Serif" as the backup font.
+I decided to use Google fonts "Karla" for all pages with "Sans Serif" as the backup font.
 
 Google fonts link [here](https://fonts.google.com/specimen/Karla?query=karla)
 
@@ -256,23 +262,23 @@ Navigation bar:
 
 Navbar Logged:
 
-![navbar_logged](readme_assets/wireframes/navbar_logged.png)
+![navbar_logged](readme_assets/features/navbar_logged.png)
 
 Navbar not Logged:
 
-![navbar_not_logged](readme_assets/wireframes/navbar_not_logged.png)
+![navbar_not_logged](readme_assets/features/navbar_not_logged.png)
 
 Navbar showing "Our Rooms" link active:
 
-![navbar_active_link](readme_assets/wireframes/navbar_active_link.png)
+![navbar_active_link](readme_assets/features/navbar_active_link.png)
 
 Navbar mobile:
 
-![navbar_mobile](readme_assets/wireframes/mobile_navbar.png)
+![navbar_mobile](readme_assets/features/mobile_navbar.png)
 
 Navbar hamburger icons mobile:
 
-![navbar_hamburger_icons_mobile](readme_assets/wireframes/mobile_navbar_hamburger_icon.png)
+![navbar_hamburger_icons_mobile](readme_assets/features/mobile_navbar_hamburger_icon.png)
 
 Footer:
 
@@ -280,6 +286,55 @@ Footer:
 - It has three social links placed at the center of the page that opens in a new page.
 
 ![footer](readme_assets/wireframes/footer.png)
+
+### Home Page
+
+- The Home page has a short description of the hotel and two action buttons, one for booking a room and the other that will send the user to the "Our Rooms" page, where they can see information and pictures of the rooms.
+- For larger screens the hotel information is displayed inside a container on top of the hero image to increase readability.
+
+![features_index_hero](readme_assets/features/features_index_hero.png)
+
+- Below the hero image, you can find an iframe containing the google maps location of the hotel.
+
+![features_index_map](readme_assets/features/features_index_map.png)
+
+- At the bottom of the page, you can find the hotel's contact information: address, email and phone number.
+
+![features_index_contact](readme_assets/features/features_index_contact.png)
+
+### Our Rooms Page
+
+- On the "Our Rooms" page, you will find pictures of the three types of rooms the hotel has: Double Room, Twin Room and Family Room.
+Under each picture, there is the price per night for the room and a short description of the room.
+
+![features_double_room](readme_assets/features/features_double_room.png)
+![features_twin_room](readme_assets/features/features_twin_room.png)
+![features_family_room](readme_assets/features/features_family_room.png)
+
+### Book Now Page
+
+### My bookings Page
+
+### Register Page
+
+### Sign in/out
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
