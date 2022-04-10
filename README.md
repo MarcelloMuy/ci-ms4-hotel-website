@@ -190,7 +190,7 @@ class Booking(models.Model):
         ordering = ['check_in_date']
 ```
 
-## Wire-frames
+## Wireframes
 
 [Go to the top](#table-of-contents)
 
@@ -457,35 +457,70 @@ If the user confirms the sign-out, an alert will show.
 
 ![features_sign_out_alert](readme_assets/features/features_sign_out_alert.png)
 
+## 3 Technologies Used
 
+[Go to the top](#table-of-contents)
 
+- [HTML5](https://en.wikipedia.org/wiki/HTML)
+  - The project uses HyperText Markup Language.
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+  - The project uses Cascading Style Sheets.
+- [Django 3.2](https://en.wikipedia.org/wiki/Django_(web_framework))
+  - Django was used as the web framework to develop this project.
+  - Below you can find the Django libraries and packages used in this project.
+    - [Gunicorn](https://gunicorn.org/)
+      - Used to run server on heroku
+    - [Dj_database_url](https://pypi.org/project/dj-database-url/)
+      - Utility to utilize the DATABASE_URL environment variable to configure Django application.
+    - [Psycopg2](https://pypi.org/project/psycopg2/)
+      - Library to connect to PostgreSQL
+    - [Cloudinary](https://en.wikipedia.org/wiki/Cloudinary)
+      - Library to host pictures on Heroku
+    - [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+      - Library used for authentication and registration
+    - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+      - Library used to format forms in Django.
+    - [WhiteNoise](http://whitenoise.evans.io/en/stable/)
+      - Allows web app to serve its own static files.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+  - The project uses JavaScript.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+  - The project uses Python.
+- [Boostrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+  - The project uses Bootstrap 4.6.
+- [Cloudinary](https://en.wikipedia.org/wiki/Cloudinary)
+  - Cloudinary was used as cloud-based service to store the images used in this project.
+- [PostgreSQL](https://www.postgresql.org/)
+  - The project uses PostgreSQL as a database.
+- [Gitpod](https://www.gitpod.io/)
+  - The project uses Gitpod.
+- [Chrome](https://www.google.com/intl/en_uk/chrome/)
+  - The project uses Chrome to debug and test the source code using HTML5.
+- [Balsamiq](https://balsamiq.com/)
+  - Balsamiq was used to create the wireframes during the design process.
+- [Canva](https://en.wikipedia.org/wiki/Canva)
+  - Canva was used as the image provider for this project.
+- [Google Fonts](https://fonts.google.com/)
+  - Google fonts were used to import the "Karla" font into the style.css file which is used on all pages throughout the project.
+  [Heroku](https://en.wikipedia.org/wiki/Heroku)
+  - Heroku was useed as a cloud platform service for this project.
+- [GitHub](https://github.com/)
+  - GitHub was used to store the project's code after being pushed from Git.
 
+## 4 Testing
 
+[Go to the top](#table-of-contents)
 
+### Chrome DevTools
 
+I used the developer tools to debug my code and try different styles. When something in my code didn’t behave as I expected, I would inspect it and try out other solutions. Finally, when I was happy with the results, I would copy and paste the code into the project file.
 
+### Responsive Tools
 
+I used [Am I Responsive](http://ami.responsivedesign.is) in conjunction with Chrome DevTools to check how the website behaved in different screen sizes.
 
+### W3C Validator Tools
 
+#### HTML
 
-
-
-
-
-
-
-
-
-
-
-## Installed frameworks and libraries
-
-- Django 3.2 (framework)
-- Gunicorn (to run server on heroku)
-
-- Dj_database_url (library)
-- Psycopg2 (library to connect to PostgreSQL)
-- Cloudinary (library to host pictures on Heroku)
-- django-allauth (library used for authentication and registration)
-- django-crispy-forms (library used to format forms)
-- whitenoise (Allows web app to serve its own static files)
+I used [W3C Markup](https://validator.w3.org/) to check my code for any errors in the HTML pages.
