@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to my fourth milestone project. In this project, I create a hotel booking system where users can register an account, book a room, and manage their bookings.  
+Welcome to my fourth milestone project. In this project, I have created a hotel booking system where users can register an account, book a room, and manage their bookings.  
 It will use the Django framework, Python, HTML, and JavaScript languages.
 
 This project aims to show the use of CRUD functionality (Create, Read, Update, Delete). After registering an account, the user can create, read, update and delete their hotel booking.
@@ -40,18 +40,25 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
   - [Sign in/out](#sign-in/out)
 - [3 Technologies Used](#3-technologies-used)
 - [4 Testing](#4-testing)
+  - [Chrome DevTools](#chrome-devtools)
+  - [Responsive Tools](#responsive-tools)
+  - [W3C Validator Tools](#w3c-validator-tools)
+  - [JavaScript](#javascript)
+  - [Python](#python)
+  - [Manual Testing](#manual-testing)
 - [5 Development Cycle](#5-development-cycle)
+  - [Project Checklist](#project-checklist)
 - [6 Deployment](#6-deployment)
 - [7 End Product](#7-end-product)
-- [8 Known Bugs](#8-known-bugs)
+- [8 Know Bugs](#8-known-bugs)
 - [9 Credits](#9-credits)
 
 ## 1 UX
 
 [Go to the top](#table-of-contents)
 
-Traveling is by far the thing that I like to do most, and a big part of the trip is about where you are staying.
-When you visit a new city, you need a place to stay. The easiest way to book a hotel room is online.
+Travelling is by far the thing that I like to do most, and a big part of any trip is about the accommodation you choose to stay in.
+When you visit a new city, you need a place to stay, and nowadays the easiest way to book a hotel room is online.
 
 This project will demonstrate how simple and easy a hotel booking system can be.
 
@@ -78,7 +85,7 @@ First Time Visitor Goals
 
 Returning Visitor Goals
 
-- As a Returning Visitor, I want to view my bookings details.
+- As a Returning Visitor, I want to view my booking details.
 - As a Returning Visitor, I want to update an upcoming booking.
 - As a Returning Visitor, I want to cancel an upcoming booking.
 
@@ -92,7 +99,7 @@ Frequent User Goals
 
  The following user expections were considered while designing the site:
 
-- The menu is clear to read and navigate.
+- The menu is clear to read and easy to navigate.
 - The site structure is designed to be simple and easy to use.
 - The user interface is easy to navigate.
 - The website is responsive on all devices.
@@ -103,23 +110,23 @@ Frequent User Goals
 
 [Go to the top](#table-of-contents)
 
-I use GitHub kanban board to log all user stories for my project. It was an excellent tool to visualize what to focus on first.
+I used GitHub kanban board to log all user stories for my project. It was an excellent tool to visualize what to focus on first.
 The user stories would go directly to the "To Do" lane when created. I would move them to the "In progress" lane when working on the story, and once completed, I would move them to the "Done" lane.
 
-![user_story_board](readme_assets/images/user_story_board.png)
+![User Story board](readme_assets/images/user_story_board.png)
 
 ### Scope
 
 [Go to the top](#table-of-contents)
 
-I decided to divide this project into two phases. I include the features that I have identified as a minimum viable product in the first phase.
-In the second, I included the features that I found would make a good improvement for the web application.
+I decided to divide this project into two phases. I included the features that I have identified as a minimum viable product in the first phase.
+In the second, I included the features that I thought would make a good improvement for the web application.
 
 ### Phase 1
 
 [Go to the top](#table-of-contents)
 
-- Display rooms pictures
+- Display pictures of the hotel rooms
 - Display hotel information, including location and contact
 - Allow users to register a new account
 - Responsive design
@@ -136,7 +143,7 @@ In the second, I included the features that I found would make a good improvemen
 - Register account email confirmation
 - Email confirmation for new bookings
 - Create a new Django view to confirm booking deletion instead of using a JavaScript function
-- Calculate the total of the booking and display it to the user
+- Calculate the total price of the booking and display it to the user
 - A button on the "Update booking" page to go back to "My Bookings" page if the user changes their mind.
 
 ## Structure
@@ -153,7 +160,7 @@ In the second, I included the features that I found would make a good improvemen
 
 - Planned database structure:
 
-![database_model](readme_assets/images/data_model.png)
+![Database Model](readme_assets/images/data_model.png)
 
 - Final database structure:
 
@@ -198,23 +205,23 @@ class Booking(models.Model):
 
 Home Page mobile:
 
-![home_page_mobile](readme_assets/wireframes/mobile_home_page.png)
+![Home Page Mobile](readme_assets/wireframes/mobile_home_page.png)
 
 Our Rooms Page mobile:
 
-![ours_rooms_page_mobile](readme_assets/wireframes/mobile_our_rooms_page.png)
+![Ours Rooms Page Mobile](readme_assets/wireframes/mobile_our_rooms_page.png)
 
-My bookings Page mobile:
+My Bookings Page mobile:
 
-![my_bookings_page_mobile](readme_assets/wireframes/mobile_my_bookings.png)
+![My Bookings Page Mobile](readme_assets/wireframes/mobile_my_bookings.png)
 
 Book Now Page mobile:
 
-![book_now_page_mobile](readme_assets/wireframes/mobile_book_now.png)
+![Book Now Page Mobile](readme_assets/wireframes/mobile_book_now.png)
 
 Sign in/out and Register Page mobile:
 
-![sign_in/out_and_register_page_mobile](readme_assets/wireframes/mobile_sign_in_out.png)
+![Sign in/out and register page mobile](readme_assets/wireframes/mobile_sign_in_out.png)
 
 ### Desktop
 
@@ -226,17 +233,17 @@ Index Page desktop top:
 
 The index page has a bigger hero image covering most of the page, a margin on both sides of the page, and the hotel info is displayed on top of the hero image.
 
-![index_page_desktop_top](readme_assets/wireframes/desktop_index_top.png)
+![index page desktop top](readme_assets/wireframes/desktop_index_top.png)
 
 Index Page desktop bottom:
 
-![index_page_desktop_bottom](readme_assets/wireframes/desktop_index_bottom.png)
+![index page desktop bottom](readme_assets/wireframes/desktop_index_bottom.png)
 
 My Bookings Page desktop:
 
 My bookings page displays booking cards in rows of up to four cards.
 
-![my_bookings_page_desktop](readme_assets/wireframes/desktop_my_bookings.png)
+![my bookings page desktop](readme_assets/wireframes/desktop_my_bookings.png)
 
 ## Surface
 
@@ -246,7 +253,7 @@ My bookings page displays booking cards in rows of up to four cards.
 
 I used ColorSpace to generate this colour scheme.
 
-![colour_scheme](readme_assets/wireframes/colour_scheme.png)
+![colour scheme](readme_assets/wireframes/colour_scheme.png)
 
 The following colors were used to design this website:
 
@@ -274,30 +281,30 @@ Navigation bar:
 
 - Is placed at the top of the screen at all times
 - If the user is logged in, the "Sign-in" link will change to "Sign out" and the "Register" link will disappear.
-- The link in the navbar will have a class attribute to show as active when the user is the specific page. The "Home" and "Contact US" links will be activated together as both links belong to the same page but in different sections.
+- The link in the navbar will have a class attribute to show as active when the user is the specific page. The "Home" and "Contact Us" links will be activated together as both links belong to the same page but in different sections.
 - The restaurant logo works as a link for the home page.
 - In the mobile version, the logo is positioned at the center of the navbar, and a hamburger icon is placed on the left.
 - All links are displayed when the hamburger icon is clicked, as shown below.
 
 Navbar Logged:
 
-![navbar_logged](readme_assets/features/navbar_logged.png)
+![navbar logged](readme_assets/features/navbar_logged.png)
 
 Navbar not Logged:
 
-![navbar_not_logged](readme_assets/features/navbar_not_logged.png)
+![navbar not logged](readme_assets/features/navbar_not_logged.png)
 
 Navbar showing "Our Rooms" link active:
 
-![navbar_active_link](readme_assets/features/navbar_active_link.png)
+![navbar active link](readme_assets/features/navbar_active_link.png)
 
 Navbar mobile:
 
-![navbar_mobile](readme_assets/features/mobile_navbar.png)
+![navbar mobile](readme_assets/features/mobile_navbar.png)
 
 Navbar hamburger icons mobile:
 
-![navbar_hamburger_icons_mobile](readme_assets/features/mobile_navbar_hamburger_icon.png)
+![navbar hamburger icons mobile](readme_assets/features/mobile_navbar_hamburger_icon.png)
 
 Footer:
 
@@ -314,15 +321,15 @@ Footer:
 - A button for booking a room and a button that will send the user to the "Our Rooms" page, where they can see information and pictures of the rooms.
 - For larger screens the hotel information is displayed inside a container on top of the hero image to increase readability.
 
-![features_index_hero](readme_assets/features/features_index_hero.png)
+![features index_hero](readme_assets/features/features_index_hero.png)
 
 - Below the hero image, you can find an iframe containing the google maps location of the hotel.
 
-![features_index_map](readme_assets/features/features_index_map.png)
+![features index_map](readme_assets/features/features_index_map.png)
 
 - At the bottom of the page, you can find the hotel's contact information: address, email and phone number.
 
-![features_index_contact](readme_assets/features/features_index_contact.png)
+![features index_contact](readme_assets/features/features_index_contact.png)
 
 ### Our Rooms Page
 
@@ -331,9 +338,9 @@ Footer:
 - On the "Our Rooms" page, you will find pictures of the three types of rooms the hotel has: Double Room, Twin Room and Family Room.
 - Under each picture, there is the price per night for the room and a short description of the room.
 
-![features_double_room](readme_assets/features/features_double_room.png)
-![features_twin_room](readme_assets/features/features_twin_room.png)
-![features_family_room](readme_assets/features/features_family_room.png)
+![features double_room](readme_assets/features/features_double_room.png)
+![features twin_room](readme_assets/features/features_twin_room.png)
+![features family_room](readme_assets/features/features_family_room.png)
 
 ### Book Now Page
 
@@ -341,26 +348,26 @@ Footer:
 
 - If the user is not logged in, a call for sign-in is displayed on the page.
 
-![features_not_auth_book_form](readme_assets/features/features_not_auth_book_now.png)
+![features not auth book form](readme_assets/features/features_not_auth_book_now.png)
 
 On the "Book Now" page, the user will be asked to fill up a form with:
 
-![features_book_now](readme_assets/features/features_book_now.png)
+![features book now](readme_assets/features/features_book_now.png)
 
 - Check-in date (date must be for the next day onwards)
 - Number of nights (up to 30 nights)
 - Number of guests (up to 15 guests)
 - Type of room (Choose between double, twin or family rooms)
-- When clicking the "Book Now" button thank you page will be displayed.
-- On the "thank you" page, the user can find a button to manage bookings.
+- When clicking the "Book Now" button the thank you page will be displayed.
+- On the "thank you" page, the user can find a button to manage their bookings.
 
-![features_thank_you](readme_assets/features/features_thank_you.png)
+![features thank you](readme_assets/features/features_thank_you.png)
 
 - An alert error message will show if the user inserts any invalid information.
 
-![features_date_error_alert](readme_assets/features/features_date_error_alert.png)
-![features_nights_error_alert](readme_assets/features/features_nights_error_alert.png)
-![features_guests_error_alert](readme_assets/features/features_guests_error_alert.png)
+![features date error alert](readme_assets/features/features_date_error_alert.png)
+![features nights error alert](readme_assets/features/features_nights_error_alert.png)
+![features guests error alert](readme_assets/features/features_guests_error_alert.png)
 
 ### My bookings Page
 
@@ -368,13 +375,13 @@ On the "Book Now" page, the user will be asked to fill up a form with:
 
 - If the user is not logged in, a call for sign-in is displayed on the page.
 
-![features_my_bookings_not_auth](readme_assets/features/features_my_bookings_not_auth.png)
+![features my bookings not auth](readme_assets/features/features_my_bookings_not_auth.png)
 
 On the "My bookings" page, the bookings are separated into two categories: Upcoming and Past.
 
 - If the user has no bookings, a message is displayed instead of the cards.
 
-![features_my_bookings_no_bookings](readme_assets/features/features_my_bookings_no_bookings.png)
+![features my bookings no bookings](readme_assets/features/features_my_bookings_no_bookings.png)
 
 - For upcoming bookings, the card will have two buttons at the bottom for updating and deleting the booking.
 - The cards are ordered by the nearest check-in date.
@@ -392,39 +399,38 @@ Each booking is displayed on a card containing:
 
 - If the user clicks on the "Update" button, the "Update Booking" page will show containing a form to update the booking.
 
-![features_update_booking](readme_assets/features/features_update_booking.png)
+![features update booking](readme_assets/features/features_update_booking.png)
 
 - An alert will show when the update is done.
 
-![features_update_booking_alert](readme_assets/features/features_update_booking_alert.png)
+![features update booking alert](readme_assets/features/features_update_booking_alert.png)
 
 - If the user clicks on the "Cancel" button, a JavaScript onclick function will be called, and a popup to confirm the cancellation will show.
 
-![features_delete_booking_confirmation](readme_assets/features/features_delete_booking_confirmation.png)
+![features delete booking confirmation](readme_assets/features/features_delete_booking_confirmation.png)
 
 - An alert will show when the cancelation is done.
 
-![features_delete_booking_alert](readme_assets/features/features_delete_booking_alert.png)
+![features delete booking alert](readme_assets/features/features_delete_booking_alert.png)
 
 ### Register Page
 
 [Go to the top](#table-of-contents)
 
-On the registration page, the user will need to fill up a form containing:
+On the registration page, the user will need to fill in a form containing:
 
 - Username
 - Email(optional)
 - password
 - password(again)
 
-![features_sign_up](readme_assets/features/features_sign_up.png)
+![features sign up](readme_assets/features/features_sign_up.png)
 
 When clicking the sign-up button, two alerts will show.
 
-![features_registration_alerts](readme_assets/features/features_registration_alerts.png)
+![features registration alerts](readme_assets/features/features_registration_alerts.png)
 
-Because this project doesn't have an e-mail confirmation management system yet.
-This line of code was added to settings.py.
+This project doesn't have an e-mail confirmation management system yet. Because of this, the line of code below was added to settings.py.
 
 ```python
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -432,30 +438,30 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 The e-mail confirmation is handled in the console, as seen below.
 
-![features_console_email_confirmation](readme_assets/features/features_console_email_confirmation.png)
+![features console email confirmation](readme_assets/features/features_console_email_confirmation.png)
 
 ### Sign in/out
 
 [Go to the top](#table-of-contents)
 
-On "Sign in" page, the user will need to fill up a form containing:
+On the "Sign in" page, the user will need to fill up a form containing:
 
 - Username
 - Password
 
-![features_sign_in](readme_assets/features/features_sign_in.png)
+![features sign in](readme_assets/features/features_sign_in.png)
 
 An alert will show once the sign-in is completed.
 
-![features_sign_alert](readme_assets/features/features_sign_in_alert.png)
+![features sign alert](readme_assets/features/features_sign_in_alert.png)
 
 If the user clicks on the sign-out link in the navigation bar, the "Sign out" page will be displayed.
 
-![features_sign_out](readme_assets/features/features_sign_out.png)
+![features sign out](readme_assets/features/features_sign_out.png)
 
 If the user confirms the sign-out, an alert will show.
 
-![features_sign_out_alert](readme_assets/features/features_sign_out_alert.png)
+![features sign out alert](readme_assets/features/features_sign_out_alert.png)
 
 ## 3 Technologies Used
 
@@ -513,13 +519,19 @@ If the user confirms the sign-out, an alert will show.
 
 ### Chrome DevTools
 
+[Go to the top](#table-of-contents)
+
 I used the developer tools to debug my code and try different styles. When something in my code didn’t behave as I expected, I would inspect it and try out other solutions. Finally, when I was happy with the results, I would copy and paste the code into the project file.
 
 ### Responsive Tools
 
+[Go to the top](#table-of-contents)
+
 I used [Am I Responsive](http://ami.responsivedesign.is) in conjunction with Chrome DevTools to check how the website behaved in different screen sizes.
 
 ### W3C Validator Tools
+
+[Go to the top](#table-of-contents)
 
 #### HTML
 
@@ -528,11 +540,11 @@ I used [W3C Markup](https://validator.w3.org/) to check my code for any errors i
 - All pages were tested using the heroku live link
 - I found an error within my index.html iframe.
 
-![w3c_index_iframe_error](readme_assets/error_images/w3c_index_iframe_error.png)
+![w3c index iframe error](readme_assets/error_images/w3c_index_iframe_error.png)
 
 - This error was fixed by moving all the iframe src path to one single line.
 
-![w3c_index_iframe_error_fix](readme_assets/error_images/w3c_index_iframe_error_fix.png)
+![w3c index iframe error fix](readme_assets/error_images/w3c_index_iframe_error_fix.png)
 
 - All other template pages came back with no errors.
 
@@ -541,17 +553,21 @@ I used [W3C Markup](https://validator.w3.org/) to check my code for any errors i
 I used [W3C CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input) to check my code for any errors in my style.css page.
 
 I had no errors in my CSS file:
-![w3c_css_validation](readme_assets/error_images/w3c_css_validation.png)
+![w3c css validation](readme_assets/error_images/w3c_css_validation.png)
 
 ### JavaScript
 
+[Go to the top](#table-of-contents)
+
 I used [JS Hint](https://jshint.com/) to check for any errors in the base.html file JavaScript script tag. JS Hint showed warnings below:
 
-![js_hint_error](readme_assets/error_images/js_error.png)
+![js hint error](readme_assets/error_images/js_error.png)
 
 As these warnings were related to the esversion, they were ignored.
 
 ### Python
+
+[Go to the top](#table-of-contents)
 
 I used [PEP8 online](http://pep8online.com/) to check for errors within my Python files.
 
@@ -595,4 +611,205 @@ I decided to make no changes to the settings.py as the errors were in a critical
 
 [Go to the top](#table-of-contents)
 
-I
+I have tested this website features in multiples screen sizes.
+
+These include:
+
+- Google Chrome
+- Mozila Firefox
+- Safari
+
+The following test process was done on all pages using pc and mobile:
+
+### Navigation Bar
+
+- The navigation bar was tested on all pages.
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Home page | When clicking the "Home" button in the navigation bar, the browser redirects me to the home page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Logo | When clicking the "Logo" in the navigation bar, the browser redirects me to the home page. The logo is placed at the center of the navbar on small screens. All links in will placed in the hamburger menu in small screens | PASS
+Contact Us | When clicking the "Contact Us" button in the navigation bar, the browser redirects me to the contact us section on the page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Our Rooms | When clicking the "Our Rooms" button in the navigation bar, the browser redirects me to the our rooms page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Book Now | When clicking the "Book Now" button in the navigation bar, the browser redirects me to the book now page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+My Bookings | When clicking the "My Bookings" button in the navigation bar, the browser redirects me to the my bookings page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Register | When clicking the "Register" button in the navigation bar, the browser redirects me to the register page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Sign-in / Sign-out | When clicking the "Sign-in" or "Sign-out" button in the navigation bar, the browser redirects me to the Sign-in or sign-out page. The register link is only displayed if the user is signed-in. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+
+### Footer
+
+- The Footer was tested on all pages.
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Facebook | When clicking the Facebook icon, a new tab opens and redirects to the Facebook website. | PASS
+Twitter | When clicking the Twitter icon, a new tab opens and redirects to the Twitter website. | PASS
+Instagram | When clicking the Instagram icon, a new tab opens and redirects to the Instagram website. | PASS
+
+### Home page
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are correctly displayed, have no pixelation or stretched images and are responsive on all devices. | PASS
+Buttons | Checked that both buttons "Book Now" and "Our Rooms" redirect the user to the correct page and display the bootstrap hover effect when hovered. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
+Iframe | Check that Iframe displays the correct google maps link. | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+
+### Our Rooms page
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are correctly displayed, have no pixelation or stretched images and are responsive on all devices. | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
+
+### Book Now page
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Authentication | Check that content is only displayed if the user is authenticated. A call to sign in is displayed if the user is not authenticated. | PASS
+Form | Check-in field only accepts dates starting on the next day. The "Number of nights" field only accepts up to 30 nights. The "Number of guests" field only accepts up to 15 guests. The form is only submitted when all required fields are filled out. | PASS
+Buttons | "Sign in" button redirects to the sign-in page. The "Book now" button redirects to the "Thank you" page. | PASS
+Alerts |Checked if all fields display the correct error message if the user inserts invalid information. | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
+
+### Thank You page
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Text | Checked that all fonts and colours used are consistent. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view. | PASS
+button | Check if the "Manage Bookings" button redirects to my bookings page. | PASS
+
+### My Bookings page
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Authentication | Check that content is only displayed if the user is authenticated. A call to sign in is displayed if the user is not authenticated. | Pass
+Cards | Check that booking cards are displayed in rows of up to 4 cards. | PASS
+Cards | Check that booking cards are separated into two groups by older than today. | PASS
+Cards | Check that cards are ordered by check-in date. | PASS
+Buttons | Check that the "Update" button redirects to the update booking page. The "Cancel" button opens a confirmation pop-up. The booking is deleted from the database after user confirmation. | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
+
+### Update Your Booking page
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Form | The form is prepopulated with booking information. Check-in field only accepts dates starting on the next day. The "Number of nights" field only accepts up to 30 nights. The "Number of guests" field only accepts up to 15 guests. The form is only submitted when all required fields are filled out. | PASS
+Button | The "Update Booking" button updates the booking and redirects to the my bookings page.| PASS
+Alerts |Checked if all fields display the correct error message if the user inserts invalid information. Check if the form is still prepopulated after the alert reloads the page. Check if the correct alert is displayed after successfully updating the booking | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
+
+### Register page
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Form | The form is only submitted when all the required information is filled out. | PASS
+Alert | A success alert is displayed when the user is registered. | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
+
+### Sign in/out pages
+
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Form | The form is only submitted when all the required information is filled out. | PASS
+Alert | A success alert is displayed when the user is logged in and signs out. | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
+
+## 5 Development Cycle
+
+[Go to the top](#table-of-contents)
+
+### Project Checklist
+
+[Go to the top](#table-of-contents)
+
+- Create a new Github repository
+- Open a new Gitpod workspace
+
+- Install Django and the supporting libraries
+  - Install Django and Gunicorn. Gunicorn is used to run Django on Heroku.
+  - Install support libraries, including psycopg2. This is used to connect to the PostgreSQL database.
+  - Install Cloudinary libraries to host pictures on Heroku.
+  - Create the requirements.txt file. Here you include the project's dependencies so Heroku can recognize them.
+
+- Create a new, blank Django Project
+  - Create a new project
+  - Create the app
+  - Add bookingsystem to the installed apps in settings.py
+  - Migrate all new changes to the database
+  - Run the server to test
+
+- Setup project to use Cloudinary and PostgreSQL
+  - Create new Heroku app
+  - Sign into Heroku
+  - Select New
+  - Select create new app
+  - Enter a relevant app name
+  - Select appropriate region
+  - Select the create app button
+
+- Attach PostgreSQL database
+  - In Heroku go to resources
+  - Search for Postgres in the add-ons box
+  - Select Heroku Postgres
+  - Submit order form
+
+- Prepare the environment and settings.py file
+  - Create env.py file
+  - Add DATABASE_URL with the Postgres URL from Heroku
+  - Add SECRET_KEY with a randomly generated key
+  - Add SECRET_KEY and generated key to the config vars in Heroku
+  - Add if statement to settings.py to prevent the production server from erroring
+  - Replace insecure key with the environment variable for the SECRET_KEY
+  - Add Heroku database as the back end
+  - Migrate changes to new database
+
+- Get static media files stored on Cloudinary
+  - Create a Cloudinary account
+  - From the dashboard, copy the API Environment variable
+  - In the settings.py file create a new environment variable for CLOUDINARY_URL
+  - Add the CLOUDINARY_URL variable to Heroku
+  - Add a temporary config var for DISABLE_COLLECTSTATIC
+  - In settings.py add Cloudinary as an installed app
+  - Add static and media file variables
+  - Add templates directory
+  - Change DIR's key to point to TEMPALTES_DIR
+  - Add Heroku hostname to allowed hosts
+  - Create directories for media, static and templates in the project workspace
+  - Create a Procfile
+
+## 6 Deployment
+
+[Go to the top](#table-of-contents)
+
+When making the final deployment to Heroku:
+
+1. I didn't have to uncomment the PostgreSQL database from settings.py as I had it done earlier in the project, but it is important to make sure it is using the correct database.
+2. Have all installed packages added to requirements.txt using pip3 freeze --local  > requiremnets.txt
+3. Set debug = False in my settings.py file.
+4. Commit and push all files to GitHub
+5. In Heroku, remove the DISABLE_COLLECTSTATIC config var.
+6. In the deploy tab, go to the manual deploy sections and click deploy branch.
+
+When deploying the website to Heroku, all my static files were missing. This problem was fixed by installing the WhiteNoise package allowing the web application to serve its static files.
+
+##
+
+## Bugs List
+
+- After a Heroku maintenance connecting to the PostgreSQL database would give an authentication error. Fixed problem by copying the new password from config vars on Heroku to DATABASE_URL in envy.py.
+
+- When trying to add a new account using allauth would get an error when trying to send an automatic confirmation e-mail / Fixed problem by adding EMAIL_BACKEND in settings.py printing the e-mail to console instead.
+
+![allauth error](readme_assets/error_images/bug_allauth_errno-111_connection_refused.png)
+
+W
