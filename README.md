@@ -55,7 +55,7 @@ When you visit a new city, you need a place to stay. The easiest way to book a h
 
 This project will demonstrate how simple and easy a hotel booking system can be.
 
-## 1.1 Strategy
+## Strategy
 
 [Go to the top](#table-of-contents)
 
@@ -139,7 +139,7 @@ In the second, I included the features that I found would make a good improvemen
 - Calculate the total of the booking and display it to the user
 - A button on the "Update booking" page to go back to "My Bookings" page if the user changes their mind.
 
-## 1.2 Structure
+## Structure
 
 [Go to the top](#table-of-contents)
 
@@ -190,7 +190,7 @@ class Booking(models.Model):
         ordering = ['check_in_date']
 ```
 
-## 1.3 Wire-frames
+## Wire-frames
 
 [Go to the top](#table-of-contents)
 
@@ -238,7 +238,7 @@ My bookings page displays booking cards in rows of up to four cards.
 
 ![my_bookings_page_desktop](readme_assets/wireframes/desktop_my_bookings.png)
 
-## 1.4 Surface
+## Surface
 
 [Go to the top](#table-of-contents)
 
