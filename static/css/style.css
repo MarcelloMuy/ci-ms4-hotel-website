@@ -93,9 +93,9 @@ p {
   margin-top: 15px;
 }
 
-/* Booking Form */
-.booking-form {
-  padding-bottom: 50px;
+/* Gives padding-bottom */
+.pdn-btom {
+  padding-bottom: 60px;
 }
 
 /* My bookings */
