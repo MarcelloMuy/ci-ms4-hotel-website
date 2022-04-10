@@ -14,7 +14,7 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
 ## Table of Contents
 
 - [1 UX](#1-ux)
-  - [1.1 Strategy](#1.1-strategy)
+  - [Strategy](#strategy)
     - [Project Goals](#project-goals)
     - [User Goals](#user-goals)
     - [User Expectations](#user-expectations)
@@ -22,12 +22,12 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
     - [Scope](#scope)
       - [Phase 1](#phase-1)
       - [Phase 2](#phase-2)
-  - [1.2 Structure](#1.2-structure)
+  - [Structure](#structure)
     - [Data Model](#data-model)
-  - [1.3 Wire-frames](#1.3-wire-frames)
+  - [Wireframes](#wireframes)
     - [Mobile](#mobile)
     - [Desktop](#desktop)
-  - [1.4 Surface](#1.4-surface)
+  - [Surface](#surface)
     - [Colours](#colours)
     - [Typography](#typography)
 - [2 Features](#2-features)
@@ -38,13 +38,13 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
   - [My Bookings Page](#my-bookings-page)
   - [Register page](#register-page)
   - [Sign in/out](#sign-in/out)
-- [3 Technologies Used](#technologies-used)
-- [4 Testing](#testing)
-- [5 Development Cycle](#development-cycle)
-- [6 Deployment](#deployment)
-- [7 End Product](#end-product)
-- [8 Known Bugs](#known-bugs)
-- [9 Credits](#credits)
+- [3 Technologies Used](#3-technologies-used)
+- [4 Testing](#4-testing)
+- [5 Development Cycle](#5-development-cycle)
+- [6 Deployment](#6-deployment)
+- [7 End Product](#7-end-product)
+- [8 Known Bugs](#8-known-bugs)
+- [9 Credits](#9-credits)
 
 ## 1 UX
 
@@ -264,7 +264,7 @@ I decided to use Google fonts "Karla" for all pages with "Sans Serif" as the bac
 
 Google fonts link [here](https://fonts.google.com/specimen/Karla?query=karla)
 
-## Features
+## 2 Features
 
 [Go to the top](#table-of-contents)
 
