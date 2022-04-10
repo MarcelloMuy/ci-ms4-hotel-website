@@ -13,9 +13,9 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
 
 ## Table of Contents
 
-- [1 UX](#ux)
-  - [1.1 Strategy](#1-strategy)
-    - [Project Goals](#1.1-project-goals)
+- [1 UX](#1-ux)
+  - [1.1 Strategy](#1.1-strategy)
+    - [Project Goals](#project-goals)
     - [User Goals](#user-goals)
     - [User Expectations](#user-expectations)
     - [User Stories](#user-stories)
@@ -61,9 +61,13 @@ This project will demonstrate how simple and easy a hotel booking system can be.
 
 ### Project Goals
 
+[Go to the top](#table-of-contents)
+
 This project aims to allow users to register a new account, perform a sign-in and sign-out action, book a hotel room, and manage their bookings (see past and future bookings, make an update on an upcoming booking, or cancel the booking).
 
 ### User Goals
+
+[Go to the top](#table-of-contents)
 
 First Time Visitor Goals
 
@@ -84,6 +88,8 @@ Frequent User Goals
 
 ### User Expectations
 
+[Go to the top](#table-of-contents)
+
  The following user expections were considered while designing the site:
 
 - The menu is clear to read and navigate.
@@ -95,6 +101,8 @@ Frequent User Goals
 
 ### User Stories
 
+[Go to the top](#table-of-contents)
+
 I use GitHub kanban board to log all user stories for my project. It was an excellent tool to visualize what to focus on first.
 The user stories would go directly to the "To Do" lane when created. I would move them to the "In progress" lane when working on the story, and once completed, I would move them to the "Done" lane.
 
@@ -102,10 +110,14 @@ The user stories would go directly to the "To Do" lane when created. I would mov
 
 ### Scope
 
+[Go to the top](#table-of-contents)
+
 I decided to divide this project into two phases. I include the features that I have identified as a minimum viable product in the first phase.
 In the second, I included the features that I found would make a good improvement for the web application.
 
 ### Phase 1
+
+[Go to the top](#table-of-contents)
 
 - Display rooms pictures
 - Display hotel information, including location and contact
@@ -118,6 +130,8 @@ In the second, I included the features that I found would make a good improvemen
 - Display alerts for each step of CRUD operations
 
 ### Phase 2
+
+[Go to the top](#table-of-contents)
 
 - Register account email confirmation
 - Email confirmation for new bookings
@@ -134,6 +148,8 @@ In the second, I included the features that I found would make a good improvemen
 - Buttons have self-describing text for easy navigation.
 
 ### Data Model
+
+[Go to the top](#table-of-contents)
 
 - Planned database structure:
 
@@ -241,6 +257,8 @@ The following colors were used to design this website:
 - #f8f9fa
 
 ### Typography
+
+[Go to the top](#table-of-contents)
 
 I decided to use Google fonts "Karla" for all pages with "Sans Serif" as the backup font.
 
