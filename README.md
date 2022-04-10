@@ -524,3 +524,75 @@ I used [Am I Responsive](http://ami.responsivedesign.is) in conjunction with Chr
 #### HTML
 
 I used [W3C Markup](https://validator.w3.org/) to check my code for any errors in the HTML pages.
+
+- All pages were tested using the heroku live link
+- I found an error within my index.html iframe.
+
+![w3c_index_iframe_error](readme_assets/error_images/w3c_index_iframe_error.png)
+
+- This error was fixed by moving all the iframe src path to one single line.
+
+![w3c_index_iframe_error_fix](readme_assets/error_images/w3c_index_iframe_error_fix.png)
+
+- All other template pages came back with no errors.
+
+#### CSS
+
+I used [W3C CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input) to check my code for any errors in my style.css page.
+
+I had no errors in my CSS file:
+![w3c_css_validation](readme_assets/error_images/w3c_css_validation.png)
+
+### JavaScript
+
+I used [JS Hint](https://jshint.com/) to check for any errors in the base.html file JavaScript script tag. JS Hint showed warnings below:
+
+![js_hint_error](readme_assets/error_images/js_error.png)
+
+As these warnings were related to the esversion, they were ignored.
+
+### Python
+
+I used [PEP8 online](http://pep8online.com/) to check for errors within my Python files.
+
+- views.py:
+
+  Three errors were found in this file
+
+![Pep8 Views](readme_assets/error_images/pep8_views_errors.png)
+
+All errors were fixed by removing trailing space and whitespace from the specific lines.
+
+![Pep8 Views Fix](readme_assets/error_images/pep8_views_errors_fix.png)
+
+- settings.py:
+
+  Multiple  "line too long" errors were found in this file
+
+![Pep8 Settings](readme_assets/error_images/pep8_settings_errors.png)
+
+I decided to make no changes to the settings.py as the errors were in a critical part of the code.
+
+- models.py:
+
+  No errors were found
+
+![Pep8 Models](readme_assets/error_images/pep8_models_no_error.png)
+
+- forms.py:
+
+  No errors were found
+
+![Pep8 Forms](readme_assets/error_images/pep8_forms_no_error.png)
+
+- urls.py
+
+  No errors were found
+
+![Pep8 URLs](readme_assets/error_images/pep8_urls_no_error.png)
+
+## Manual Testing
+
+[Go to the top](#table-of-contents)
+
+I

@@ -8,10 +8,10 @@ from .forms import BookingForm
 
 def display_bookings(request):
     '''
-    Function to render Bookings objects in mybookings.html template 
+    Function to render Bookings objects in mybookings.html template
     mybookings - Filter objects by user id
     past_bookings - Filter objects by check in date older than today
-    upcoming_bookings - Filter objects by check in date greater than 
+    upcoming_bookings - Filter objects by check in date greater than
     or equal to today
     '''
     mybookings = Booking.objects.filter(
@@ -126,11 +126,6 @@ def update_booking(request, booking_id):
     }
     return render(request, '../templates/updatebooking.html', context)
 
-
-# def delete_confirmation(request, booking_id):
-#     '''Function to confirm deletion'''
-#     booking = get_object_or_404(Booking, id=booking_id)
-    
 
 def cancel_booking(request, booking_id):
     '''Function to delete bookings'''
