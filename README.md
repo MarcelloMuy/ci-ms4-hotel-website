@@ -14,30 +14,30 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
 ## Table of Contents
 
 - [1 UX](#ux)
-  - [1.1 Strategy](#strategy)
-    - [Project Goals](#project-goals)
+  - [1.1 Strategy](#1-strategy)
+    - [Project Goals](#1.1-project-goals)
     - [User Goals](#user-goals)
     - [User Expectations](#user-expectations)
     - [User Stories](#user-stories)
     - [Scope](#scope)
       - [Phase 1](#phase-1)
       - [Phase 2](#phase-2)
-  - [1.2 Structure](#structure)
+  - [1.2 Structure](#1.2-structure)
     - [Data Model](#data-model)
-  - [1.3 Wire-frames](#wire-frames)
+  - [1.3 Wire-frames](#1.3-wire-frames)
     - [Mobile](#mobile)
     - [Desktop](#desktop)
-  - [1.4 Surface](#surface)
+  - [1.4 Surface](#1.4-surface)
     - [Colours](#colours)
     - [Typography](#typography)
-- [2 Features](#features)
+- [2 Features](#2-features)
   - [All Pages](#all-pages)
   - [Home Page](#home-page)
-  - [Our Rooms Page](#our_rooms_page)
-  - [Book Now Page](#book_now_page)
-  - [My Bookings Page](#my_bookings_page)
-  - [Register page](#register_page)
-  - [Sign in/out](#sign_in/out)
+  - [Our Rooms Page](#our-rooms-page)
+  - [Book Now Page](#book-now-page)
+  - [My Bookings Page](#my-bookings-page)
+  - [Register page](#register-page)
+  - [Sign in/out](#sign-in/out)
 - [3 Technologies Used](#technologies-used)
 - [4 Testing](#testing)
 - [5 Development Cycle](#development-cycle)
@@ -53,7 +53,7 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
 Traveling is by far the thing that I like to do most, and a big part of the trip is about where you are staying.
 When you visit a new city, you need a place to stay. The easiest way to book a hotel room is online.
 
-This project will demonstrate how simple and easy to use a hotel booking system can be.
+This project will demonstrate how simple and easy a hotel booking system can be.
 
 ## 1.1 Strategy
 
@@ -290,6 +290,8 @@ Footer:
 
 ### Home Page
 
+[Go to the top](#table-of-contents)
+
 - The Home page has a short description of the hotel and two action buttons.
 - A button for booking a room and a button that will send the user to the "Our Rooms" page, where they can see information and pictures of the rooms.
 - For larger screens the hotel information is displayed inside a container on top of the hero image to increase readability.
@@ -306,6 +308,8 @@ Footer:
 
 ### Our Rooms Page
 
+[Go to the top](#table-of-contents)
+
 - On the "Our Rooms" page, you will find pictures of the three types of rooms the hotel has: Double Room, Twin Room and Family Room.
 - Under each picture, there is the price per night for the room and a short description of the room.
 
@@ -314,6 +318,8 @@ Footer:
 ![features_family_room](readme_assets/features/features_family_room.png)
 
 ### Book Now Page
+
+[Go to the top](#table-of-contents)
 
 - If the user is not logged in, a call for sign-in is displayed on the page.
 
@@ -339,6 +345,8 @@ On the "Book Now" page, the user will be asked to fill up a form with:
 ![features_guests_error_alert](readme_assets/features/features_guests_error_alert.png)
 
 ### My bookings Page
+
+[Go to the top](#table-of-contents)
 
 - If the user is not logged in, a call for sign-in is displayed on the page.
 
@@ -382,6 +390,8 @@ Each booking is displayed on a card containing:
 
 ### Register Page
 
+[Go to the top](#table-of-contents)
+
 On the registration page, the user will need to fill up a form containing:
 
 - Username
@@ -407,6 +417,8 @@ The e-mail confirmation is handled in the console, as seen below.
 ![features_console_email_confirmation](readme_assets/features/features_console_email_confirmation.png)
 
 ### Sign in/out
+
+[Go to the top](#table-of-contents)
 
 On "Sign in" page, the user will need to fill up a form containing:
 
