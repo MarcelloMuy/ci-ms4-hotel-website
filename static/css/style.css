@@ -93,6 +93,11 @@ p {
   margin-top: 15px;
 }
 
+/* Booking Form */
+.booking-form {
+  padding-bottom: 50px;
+}
+
 /* My bookings */
 .no-book-p  {
   font-size: 20px;
