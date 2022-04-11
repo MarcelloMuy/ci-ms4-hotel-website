@@ -865,7 +865,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend
 
 - [Bootstrap](https://getbootstrap.com/) grid, buttons, navbar and footer features were used in this project.
 - [Font Awesome](https://fontawesome.com/) icons were used in this project.
-- [JavaScript](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/ae7923cfce7f4653a3af9f51825d2eba/) code for dismissing alerts were taken from the CI walkthrough projects.
+- [JavaScript](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/ae7923cfce7f4653a3af9f51825d2eba/) code for dismissing alerts was taken from the CI walkthrough projects.
 
 ### Media
 
