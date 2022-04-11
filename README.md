@@ -13,7 +13,7 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
 
 ## Table of Contents
 
-- [1 UX](#1-ux)
+- [1. UX](#ux)
   - [Strategy](#strategy)
     - [Project Goals](#project-goals)
     - [User Goals](#user-goals)
@@ -30,7 +30,7 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
   - [Surface](#surface)
     - [Colours](#colours)
     - [Typography](#typography)
-- [2 Features](#2-features)
+- [2. Features](#features)
   - [All Pages](#all-pages)
   - [Home Page](#home-page)
   - [Our Rooms Page](#our-rooms-page)
@@ -38,22 +38,22 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
   - [My Bookings Page](#my-bookings-page)
   - [Register page](#register-page)
   - [Sign in/out](#sign-in/out)
-- [3 Technologies Used](#3-technologies-used)
-- [4 Testing](#4-testing)
+- [3. Technologies Used](#technologies-used)
+- [4. Testing](#testing)
   - [Chrome DevTools](#chrome-devtools)
   - [Responsive Tools](#responsive-tools)
   - [W3C Validator Tools](#w3c-validator-tools)
   - [JavaScript](#javascript)
   - [Python](#python)
   - [Manual Testing](#manual-testing)
-- [5 Development Cycle](#5-development-cycle)
+- [5. Development Cycle](#development-cycle)
   - [Project Checklist](#project-checklist)
-- [6 Deployment](#6-deployment)
-- [7 End Product](#7-end-product)
-- [8 Know Bugs](#8-known-bugs)
-- [9 Credits](#9-credits)
+- [6. Deployment](#deployment)
+- [7. End Product](#end-product)
+- [8. Know Bugs](#known-bugs)
+- [9. Credits](#credits)
 
-## 1 UX
+## 1. UX
 
 [Go to the top](#table-of-contents)
 
@@ -271,7 +271,7 @@ I decided to use Google fonts "Karla" for all pages with "Sans Serif" as the bac
 
 Google fonts link [here](https://fonts.google.com/specimen/Karla?query=karla)
 
-## 2 Features
+## 2. Features
 
 [Go to the top](#table-of-contents)
 
@@ -463,7 +463,7 @@ If the user confirms the sign-out, an alert will show.
 
 ![features sign out alert](readme_assets/features/features_sign_out_alert.png)
 
-## 3 Technologies Used
+## 3. Technologies Used
 
 [Go to the top](#table-of-contents)
 
@@ -513,7 +513,7 @@ If the user confirms the sign-out, an alert will show.
 - [GitHub](https://github.com/)
   - GitHub was used to store the project's code after being pushed from Git.
 
-## 4 Testing
+## 4. Testing
 
 [Go to the top](#table-of-contents)
 
@@ -724,7 +724,7 @@ Alert | A success alert is displayed when the user is logged in and signs out. |
 Text | Checked that all fonts and colours used are consistent. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
 
-## 5 Development Cycle
+## 5. Development Cycle
 
 [Go to the top](#table-of-contents)
 
@@ -787,7 +787,7 @@ Responsiveness | Check every element on the page for consistent scalability in m
   - Create directories for media, static and templates in the project workspace
   - Create a Procfile
 
-## 6 Deployment
+## 6. Deployment
 
 [Go to the top](#table-of-contents)
 
@@ -802,14 +802,76 @@ When making the final deployment to Heroku:
 
 When deploying the website to Heroku, all my static files were missing. This problem was fixed by installing the WhiteNoise package allowing the web application to serve its static files.
 
-##
+## 7. End Product
 
-## Bugs List
+[Go to the top](#table-of-contents)
 
-- After a Heroku maintenance connecting to the PostgreSQL database would give an authentication error. Fixed problem by copying the new password from config vars on Heroku to DATABASE_URL in envy.py.
+Home page:
+![Home Page](readme_assets/end_product/end_product_index1.png)
 
-- When trying to add a new account using allauth would get an error when trying to send an automatic confirmation e-mail / Fixed problem by adding EMAIL_BACKEND in settings.py printing the e-mail to console instead.
+![Home Page](readme_assets/end_product/end_product_index2.png)
+
+![Home Page](readme_assets/end_product/end_product_index_mobile.png)
+
+Our Rooms page:
+![Our Rooms Page](readme_assets/end_product/end_product_our_rooms1.png)
+
+![Our Rooms Page](readme_assets/end_product/end_product_our_rooms2.png)
+
+![Our Rooms Page](readme_assets/end_product/end_product_our_rooms3.png)
+
+![Our Rooms Page](readme_assets/end_product/end_product_our_rooms_mobile.png)
+
+Book Now page:
+
+![Book Now Page](readme_assets/end_product/end_product_book_now.png)
+
+My Bookings page:
+
+![My Bookings page](readme_assets/end_product/end_product_my_bookings.png)
+
+![My Bookings page](readme_assets/end_product/end_product_my_bookings_mobile.png)
+
+## 8. Know Bugs
+
+[Go to the top](#table-of-contents)
+
+- After a Heroku maintenance, trying to connect to the PostgreSQL database would give an authentication error. Fixed problem by copying the new password from config vars on Heroku to DATABASE_URL in envy.py.
+
+- When trying to register a new account using django-allauth
+you would get an error when django-allauth tried to send an automatic confirmation e-mail to the new e-mail registered.
 
 ![allauth error](readme_assets/error_images/bug_allauth_errno-111_connection_refused.png)
 
-W
+- Fixed the problem by adding EMAIL_BACKEND in settings.py, printing the e-mail to the console instead.
+
+```python
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend
+```
+
+![Console Email Confirmation](readme_assets/features/features_console_email_confirmation.png)
+
+- Two alerts are created when registering a new account, one for successfully signing up with the new user and sending a confirmation e-mail to the newly registered e-mail account. Only one of the alerts is automatically dismissed.
+
+![Registration Alerts](readme_assets/features/features_registration_alerts.png)
+
+- This bug hasn't been fixed yet and will be dealt with in phase 2 of this project.
+
+## 9. Credits
+
+[Go to the top](#table-of-contents)
+
+### Code
+
+- [Bootstrap](https://getbootstrap.com/) grid, buttons, navbar and footer features were used in this project.
+- [Font Awesome](https://fontawesome.com/) icons were used in this project.
+- [JavaScript](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/ae7923cfce7f4653a3af9f51825d2eba/) code for dismissing alerts were taken from the CI walkthrough projects.
+
+### Media
+
+- [Canva](https://www.canva.com/) were used for all images and the logo in this project.
+- [Google maps](https://www.google.com/maps) were used for the iframe content on the home page.
+
+### Project Acknowledgements
+
+- My mentor Marcel Mulders for the support given in this project.
