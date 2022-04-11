@@ -13,7 +13,7 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
 
 ## Table of Contents
 
-- [1. UX](#ux)
+- [1 UX](#1-ux)
   - [Strategy](#strategy)
     - [Project Goals](#project-goals)
     - [User Goals](#user-goals)
@@ -30,7 +30,7 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
   - [Surface](#surface)
     - [Colours](#colours)
     - [Typography](#typography)
-- [2. Features](#features)
+- [2 Features](#2-features)
   - [All Pages](#all-pages)
   - [Home Page](#home-page)
   - [Our Rooms Page](#our-rooms-page)
@@ -38,22 +38,22 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
   - [My Bookings Page](#my-bookings-page)
   - [Register page](#register-page)
   - [Sign in/out](#sign-in/out)
-- [3. Technologies Used](#technologies-used)
-- [4. Testing](#testing)
+- [3 Technologies Used](#3-technologies-used)
+- [4 Testing](#4-testing)
   - [Chrome DevTools](#chrome-devtools)
   - [Responsive Tools](#responsive-tools)
   - [W3C Validator Tools](#w3c-validator-tools)
   - [JavaScript](#javascript)
   - [Python](#python)
   - [Manual Testing](#manual-testing)
-- [5. Development Cycle](#development-cycle)
+- [5 Development Cycle](5-#development-cycle)
   - [Project Checklist](#project-checklist)
-- [6. Deployment](#deployment)
-- [7. End Product](#end-product)
-- [8. Know Bugs](#known-bugs)
-- [9. Credits](#credits)
+- [6 Deployment](#6-deployment)
+- [7 End Product](#7-end-product)
+- [8 Know Bugs](#8-known-bugs)
+- [9 Credits](#9-credits)
 
-## 1. UX
+## 1 UX
 
 [Go to the top](#table-of-contents)
 
@@ -271,7 +271,7 @@ I decided to use Google fonts "Karla" for all pages with "Sans Serif" as the bac
 
 Google fonts link [here](https://fonts.google.com/specimen/Karla?query=karla)
 
-## 2. Features
+## 2 Features
 
 [Go to the top](#table-of-contents)
 
@@ -463,7 +463,7 @@ If the user confirms the sign-out, an alert will show.
 
 ![features sign out alert](readme_assets/features/features_sign_out_alert.png)
 
-## 3. Technologies Used
+## 3 Technologies Used
 
 [Go to the top](#table-of-contents)
 
@@ -513,7 +513,7 @@ If the user confirms the sign-out, an alert will show.
 - [GitHub](https://github.com/)
   - GitHub was used to store the project's code after being pushed from Git.
 
-## 4. Testing
+## 4 Testing
 
 [Go to the top](#table-of-contents)
 
@@ -724,7 +724,7 @@ Alert | A success alert is displayed when the user is logged in and signs out. |
 Text | Checked that all fonts and colours used are consistent. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
 
-## 5. Development Cycle
+## 5 Development Cycle
 
 [Go to the top](#table-of-contents)
 
@@ -787,7 +787,7 @@ Responsiveness | Check every element on the page for consistent scalability in m
   - Create directories for media, static and templates in the project workspace
   - Create a Procfile
 
-## 6. Deployment
+## 6 Deployment
 
 [Go to the top](#table-of-contents)
 
@@ -802,7 +802,7 @@ When making the final deployment to Heroku:
 
 When deploying the website to Heroku, all my static files were missing. This problem was fixed by installing the WhiteNoise package allowing the web application to serve its static files.
 
-## 7. End Product
+## 7 End Product
 
 [Go to the top](#table-of-contents)
 
@@ -832,7 +832,7 @@ My Bookings page:
 
 ![My Bookings page](readme_assets/end_product/end_product_my_bookings_mobile.png)
 
-## 8. Know Bugs
+## 8 Know Bugs
 
 [Go to the top](#table-of-contents)
 
@@ -857,7 +857,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend
 
 - This bug hasn't been fixed yet and will be dealt with in phase 2 of this project.
 
-## 9. Credits
+## 9 Credits
 
 [Go to the top](#table-of-contents)
 
