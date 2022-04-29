@@ -4,24 +4,31 @@
 
 {% load crispy_forms_tags %}
 
-<div class="container">
-    <div class="row">
-        <div class="pdn-btom col-md-8 offset-md-2">
-            <div class="text-center">
-                <h1>Update your Booking</h1>
-            </div>
-            <!-- Create form -->
-            <form method="POST">
-                {% csrf_token %}
-                {{ form | crispy }}
-                <div class="col-md-12 text-center">
-                    <p>
-                        <button class="btn btn-primary" type="submit">Update Booking</button>
-                    </p>
+{% if user.is_authenticated %}
+    <div class="container">
+        <div class="row">
+            <div class="pdn-btom col-md-8 offset-md-2">
+                <div class="text-center">
+                    <h1>Update your Booking</h1>
                 </div>
-            </form>
+                <!-- Create form -->
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="col-md-12 text-center">
+                        <p>
+                            <button class="btn btn-primary" type="submit">Update Booking</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+{% else %}
+    <div class="text-center">
+        <h1 class="pdn-h">Please sign in.</h1>
+        <a href="{% url 'account_login' %}" class="btn btn-primary mgn-btn">Sign in</a>
+    </div>
+{% endif %}
 
 {% endblock %}

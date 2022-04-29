@@ -86,7 +86,7 @@ def our_rooms(request):
 def update_booking(request, booking_id):
     '''Function to edit bookings'''
     # Get object with specific id or return 404 error
-    booking = get_object_or_404(Booking, id=booking_id)
+    booking = get_object_or_404(Booking, id=booking_id, user_id=request.user)
     if request.method == 'POST':  # Look for POST method only
         # Check if check-in date is at least 1 day from booking date
         # and show an error message
@@ -129,7 +129,7 @@ def update_booking(request, booking_id):
 
 def cancel_booking(request, booking_id):
     '''Function to delete bookings'''
-    booking = get_object_or_404(Booking, id=booking_id)
+    booking = get_object_or_404(Booking, id=booking_id, user_id=request.user)
     booking.delete()
     messages.success(request, 'Your booking has been cancelled')
     return redirect('/mybookings/')
