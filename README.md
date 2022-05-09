@@ -97,7 +97,7 @@ Frequent User Goals
 
 [Go to the top](#table-of-contents)
 
- The following user expections were considered while designing the site:
+ The following user expectations were considered while designing the site:
 
 - The menu is clear to read and easy to navigate.
 - The site structure is designed to be simple and easy to use.
@@ -211,7 +211,7 @@ Home Page mobile:
 
 Our Rooms Page mobile:
 
-![Ours Rooms Page Mobile](readme_assets/wireframes/mobile_our_rooms_page.png)
+![Our Rooms Page Mobile](readme_assets/wireframes/mobile_our_rooms_page.png)
 
 My Bookings Page mobile:
 
@@ -527,7 +527,7 @@ If the user confirms the sign-out, an alert will show.
 
 [Go to the top](#table-of-contents)
 
-I used the developer tools to debug my code and try different styles. When something in my code didn’t behave as I expected, I would inspect it and try out other solutions. Finally, when I was happy with the results, I would copy and paste the code into the project file.
+I used the developer tools to debug my code and try different styles. When something in my code didn't behave as I expected, I would inspect it and try out other solutions. Finally, when I was happy with the results, I would copy and paste the code into the project file.
 
 ### Responsive Tools
 
@@ -545,7 +545,7 @@ I used [Am I Responsive](http://ami.responsivedesign.is) in conjunction with Chr
 
 I used [W3C Markup](https://validator.w3.org/) to check my code for any errors in the HTML pages.
 
-- All pages were tested using the heroku live link
+- All pages were tested using the Heroku live link
 - I found an error within my index.html iframe.
 
 ![w3c index iframe error](readme_assets/error_images/w3c_index_iframe_error.png)
@@ -621,12 +621,12 @@ I decided to make no changes to the settings.py as the errors were in a critical
 
 [Go to the top](#table-of-contents)
 
-I have tested this website features in multiples screen sizes.
+I have tested this website's features in multiple screen sizes.
 
 These include:
 
 - Google Chrome
-- Mozila Firefox
+- Mozilla Firefox
 - Safari
 
 The following test process was done on all pages using pc and mobile:
@@ -639,14 +639,14 @@ The following test process was done on all pages using pc and mobile:
 
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Home page | When clicking the "Home" button in the navigation bar, the browser redirects me to the home page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
-Logo | When clicking the "Logo" in the navigation bar, the browser redirects me to the home page. The logo is placed at the center of the navbar on small screens. All links in will placed in the hamburger menu in small screens | PASS
-Contact Us | When clicking the "Contact Us" button in the navigation bar, the browser redirects me to the contact us section on the page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
-Our Rooms | When clicking the "Our Rooms" button in the navigation bar, the browser redirects me to the our rooms page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
-Book Now | When clicking the "Book Now" button in the navigation bar, the browser redirects me to the book now page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
-My Bookings | When clicking the "My Bookings" button in the navigation bar, the browser redirects me to the my bookings page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
-Register | When clicking the "Register" button in the navigation bar, the browser redirects me to the register page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
-Sign-in / Sign-out | When clicking the "Sign-in" or "Sign-out" button in the navigation bar, the browser redirects me to the Sign-in or sign-out page. The register link is only displayed if the user is signed-in. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Home page | When clicking on the "Home" button in the navigation bar, the browser redirects me to the home page. The is-active styling class will be added to the nav-link, making it display text in bold. | PASS
+Logo | When clicking on the "Logo" in the navigation bar, the browser redirects me to the home page. The logo is placed at the center of the navbar on small screens. All links are placed in the hamburger menu on small screens | PASS
+Contact Us | When clicking on the "Contact Us" button in the navigation bar, the browser redirects me to the contact us section of the page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Our Rooms | When clicking on the "Our Rooms" button in the navigation bar, the browser redirects me to the our rooms page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Book Now | When clicking on the "Book Now" button in the navigation bar, the browser redirects me to the book now page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+My Bookings | When clicking on the "My Bookings" button in the navigation bar, the browser redirects me to the my bookings page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Register | When clicking on the "Register" button in the navigation bar, the browser redirects me to the register page. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
+Sign-in / Sign-out | When clicking on the "Sign-in" or "Sign-out" button in the navigation bar, the browser redirects me to the Sign-in or sign-out page. The register link is only displayed if the user is signed-in. The is-active styling class will be added to the nav-link making it display text in bold. | PASS
 Text | Checked that all fonts and colours used are consistent. | PASS
 
 ### Footer
@@ -657,9 +657,9 @@ Text | Checked that all fonts and colours used are consistent. | PASS
 
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Facebook | When clicking the Facebook icon, a new tab opens and redirects to the Facebook website. | PASS
-Twitter | When clicking the Twitter icon, a new tab opens and redirects to the Twitter website. | PASS
-Instagram | When clicking the Instagram icon, a new tab opens and redirects to the Instagram website. | PASS
+Facebook | When clicking on the Facebook icon, a new tab opens and redirects to the Facebook website. | PASS
+Twitter | When clicking on the Twitter icon, a new tab opens and redirects to the Twitter website. | PASS
+Instagram | When clicking on the Instagram icon, a new tab opens and redirects to the Instagram website. | PASS
 
 ### Home page
 
