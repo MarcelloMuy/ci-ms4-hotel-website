@@ -46,12 +46,12 @@ A live website can be found [here](https://my-hotel-project.herokuapp.com/).
   - [JavaScript](#javascript)
   - [Python](#python)
   - [Manual Testing](#manual-testing)
-- [5 Development Cycle](5-#development-cycle)
+- [5 Development and Deployment Steps](#5-development-and-deployment-steps)
   - [Project Checklist](#project-checklist)
-- [6 Deployment](#6-deployment)
-- [7 End Product](#7-end-product)
-- [8 Know Bugs](#8-known-bugs)
-- [9 Credits](#9-credits)
+  - [Deployment](#deployment)
+- [6 End Product](#6-end-product)
+- [7 Bugs](#7-bugs)
+- [8 Credits](#8-credits)
 
 ## 1 UX
 
@@ -203,6 +203,8 @@ class Booking(models.Model):
 
 ### Mobile
 
+[Go to the top](#table-of-contents)
+
 Home Page mobile:
 
 ![Home Page Mobile](readme_assets/wireframes/mobile_home_page.png)
@@ -251,6 +253,8 @@ My bookings page displays booking cards in rows of up to four cards.
 
 ### Colours
 
+[Go to the top](#table-of-contents)
+
 I used ColorSpace to generate this colour scheme.
 
 ![colour scheme](readme_assets/wireframes/colour_scheme.png)
@@ -276,6 +280,8 @@ Google fonts link [here](https://fonts.google.com/specimen/Karla?query=karla)
 [Go to the top](#table-of-contents)
 
 ### All Pages
+
+[Go to the top](#table-of-contents)
 
 Navigation bar:
 
@@ -535,6 +541,8 @@ I used [Am I Responsive](http://ami.responsivedesign.is) in conjunction with Chr
 
 #### HTML
 
+[Go to the top](#table-of-contents)
+
 I used [W3C Markup](https://validator.w3.org/) to check my code for any errors in the HTML pages.
 
 - All pages were tested using the heroku live link
@@ -549,6 +557,8 @@ I used [W3C Markup](https://validator.w3.org/) to check my code for any errors i
 - All other template pages came back with no errors.
 
 #### CSS
+
+[Go to the top](#table-of-contents)
 
 I used [W3C CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input) to check my code for any errors in my style.css page.
 
@@ -623,6 +633,8 @@ The following test process was done on all pages using pc and mobile:
 
 ### Navigation Bar
 
+[Go to the top](#table-of-contents)
+
 - The navigation bar was tested on all pages.
 
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -639,6 +651,8 @@ Text | Checked that all fonts and colours used are consistent. | PASS
 
 ### Footer
 
+[Go to the top](#table-of-contents)
+
 - The Footer was tested on all pages.
 
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -648,6 +662,8 @@ Twitter | When clicking the Twitter icon, a new tab opens and redirects to the T
 Instagram | When clicking the Instagram icon, a new tab opens and redirects to the Instagram website. | PASS
 
 ### Home page
+
+[Go to the top](#table-of-contents)
 
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
@@ -659,6 +675,8 @@ Text | Checked that all fonts and colours used are consistent. | PASS
 
 ### Our Rooms page
 
+[Go to the top](#table-of-contents)
+
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Media | All media assets are correctly displayed, have no pixelation or stretched images and are responsive on all devices. | PASS
@@ -666,6 +684,8 @@ Text | Checked that all fonts and colours used are consistent. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
 
 ### Book Now page
+
+[Go to the top](#table-of-contents)
 
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
@@ -678,6 +698,8 @@ Responsiveness | Check every element on the page for consistent scalability in m
 
 ### Thank You page
 
+[Go to the top](#table-of-contents)
+
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Text | Checked that all fonts and colours used are consistent. | PASS
@@ -685,6 +707,8 @@ Responsiveness | Check every element on the page for consistent scalability in m
 button | Check if the "Manage Bookings" button redirects to my bookings page. | PASS
 
 ### My Bookings page
+
+[Go to the top](#table-of-contents)
 
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
@@ -698,6 +722,8 @@ Responsiveness | Check every element on the page for consistent scalability in m
 
 ### Update Your Booking page
 
+[Go to the top](#table-of-contents)
+
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Form | The form is prepopulated with booking information. Check-in field only accepts dates starting on the next day. The "Number of nights" field only accepts up to 30 nights. The "Number of guests" field only accepts up to 15 guests. The form is only submitted when all required fields are filled out. | PASS
@@ -708,6 +734,8 @@ Responsiveness | Check every element on the page for consistent scalability in m
 
 ### Register page
 
+[Go to the top](#table-of-contents)
+
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Form | The form is only submitted when all the required information is filled out. | PASS
@@ -717,6 +745,8 @@ Responsiveness | Check every element on the page for consistent scalability in m
 
 ### Sign in/out pages
 
+[Go to the top](#table-of-contents)
+
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Form | The form is only submitted when all the required information is filled out. | PASS
@@ -724,7 +754,7 @@ Alert | A success alert is displayed when the user is logged in and signs out. |
 Text | Checked that all fonts and colours used are consistent. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile and desktop view.| PASS
 
-## 5 Development Cycle
+## 5 Development and Deployment Steps
 
 [Go to the top](#table-of-contents)
 
@@ -737,37 +767,39 @@ Responsiveness | Check every element on the page for consistent scalability in m
 
 - Install Django and the supporting libraries
   - Install Django and Gunicorn. Gunicorn is used to run Django on Heroku.
-  - Install support libraries, including psycopg2. This is used to connect to the PostgreSQL database.
+  - Install support libraries, including dj_database_url and psycopg2. This is used to connect to the PostgreSQL database.
   - Install Cloudinary libraries to host pictures on Heroku.
   - Create the requirements.txt file. Here you include the project's dependencies so Heroku can recognize them.
 
 - Create a new, blank Django Project
   - Create a new project
-  - Create the app
-  - Add bookingsystem to the installed apps in settings.py
+  - Create the bookingsystem app
+  - Add bookingsystem app to the installed apps in settings.py
   - Migrate all new changes to the database
   - Run the server to test
 
 - Setup project to use Cloudinary and PostgreSQL
   - Create new Heroku app
-  - Sign into Heroku
-  - Select New
-  - Select create new app
-  - Enter a relevant app name
-  - Select appropriate region
-  - Select the create app button
+    - Sign into Heroku
+    - Click on the "New" button
+    - Select create new app
+    - Enter a relevant app name
+    - Select appropriate region
+    - Click on the "Create app" button
 
 - Attach PostgreSQL database
   - In Heroku go to resources
   - Search for Postgres in the add-ons box
   - Select Heroku Postgres
-  - Submit order form
+  - Click on the "Submit Order Form" button
 
 - Prepare the environment and settings.py file
+  - In the settings tab of the heroku app click on "Reveal Config Vars" button
+  - Copy the DATABASE_URL VALUE string
   - Create env.py file
   - Add DATABASE_URL with the Postgres URL from Heroku
-  - Add SECRET_KEY with a randomly generated key
-  - Add SECRET_KEY and generated key to the config vars in Heroku
+  - Add SECRET_KEY to env.py
+  - Add SECRET_KEY to the config vars in Heroku
   - Add if statement to settings.py to prevent the production server from erroring
   - Replace insecure key with the environment variable for the SECRET_KEY
   - Add Heroku database as the back end
@@ -776,33 +808,30 @@ Responsiveness | Check every element on the page for consistent scalability in m
 - Get static media files stored on Cloudinary
   - Create a Cloudinary account
   - From the dashboard, copy the API Environment variable
-  - In the settings.py file create a new environment variable for CLOUDINARY_URL
+  - In the env.py file create a new environment variable for CLOUDINARY_URL
   - Add the CLOUDINARY_URL variable to Heroku
   - Add a temporary config var for DISABLE_COLLECTSTATIC
   - In settings.py add Cloudinary as an installed app
   - Add static and media file variables
   - Add templates directory
-  - Change DIR's key to point to TEMPALTES_DIR
+  - Change DIR's key to point to TEMPLATES_DIR
   - Add Heroku hostname to allowed hosts
   - Create directories for media, static and templates in the project workspace
   - Create a Procfile
 
-## 6 Deployment
+### Deployment
 
 [Go to the top](#table-of-contents)
 
-When making the final deployment to Heroku:
-
-1. I didn't have to uncomment the PostgreSQL database from settings.py as I had it done earlier in the project, but it is important to make sure it is using the correct database.
-2. Have all installed packages added to requirements.txt using pip3 freeze --local  > requiremnets.txt
-3. Set debug = False in my settings.py file.
-4. Commit and push all files to GitHub
-5. In Heroku, remove the DISABLE_COLLECTSTATIC config var.
-6. In the deploy tab, go to the manual deploy sections and click deploy branch.
+1. Have all installed packages added to requirements.txt using pip3 freeze --local > requiremnets.txt
+2. Set debug = False in settings.py file
+3. Commit and push all files to GitHub
+4. In Heroku, remove the DISABLE_COLLECTSTATIC config var.
+5. In the deploy tab, go to the manual deploy sections and click deploy branch.
 
 When deploying the website to Heroku, all my static files were missing. This problem was fixed by installing the WhiteNoise package allowing the web application to serve its static files.
 
-## 7 End Product
+## 6 End Product
 
 [Go to the top](#table-of-contents)
 
@@ -832,7 +861,7 @@ My Bookings page:
 
 ![My Bookings page](readme_assets/end_product/end_product_my_bookings_mobile.png)
 
-## 8 Know Bugs
+## 7 Bugs
 
 [Go to the top](#table-of-contents)
 
@@ -857,7 +886,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend
 
 - This bug hasn't been fixed yet and will be dealt with in phase 2 of this project.
 
-## 9 Credits
+## 8 Credits
 
 [Go to the top](#table-of-contents)
 
